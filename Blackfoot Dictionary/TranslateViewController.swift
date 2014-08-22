@@ -33,6 +33,14 @@ class TranslateViewController: UIViewController {
     func setInputText(input : String) {
         inputText = input
     }
+    
+    // Database functions
+    
+    func openDatabase() {
+        
+        
+        
+    }
 
     
     

@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     
     // Input outlets from Interface Builder
     @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var outputTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

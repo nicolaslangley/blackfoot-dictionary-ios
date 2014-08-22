@@ -13,6 +13,7 @@
 		23F3093719A6BA6000862680 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093619A6BA6000862680 /* Images.xcassets */; };
 		23F3094319A6BA6000862680 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */; };
 		23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094C19A6C60600862680 /* TranslateViewController.swift */; };
+		23F3095319A7166D00862680 /* BFDDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3095219A7166D00862680 /* BFDDatabaseAccess.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		23F3094119A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
 		23F3094C19A6C60600862680 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		23F3095119A7166D00862680 /* Blackfoot Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blackfoot Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		23F3095219A7166D00862680 /* BFDDatabaseAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDDatabaseAccess.m; sourceTree = "<group>"; };
+		23F3095419A716F900862680 /* BFDDatabaseAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFDDatabaseAccess.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				23F3093619A6BA6000862680 /* Images.xcassets */,
 				23F3092D19A6BA6000862680 /* Supporting Files */,
 				23F3094C19A6C60600862680 /* TranslateViewController.swift */,
+				23F3095219A7166D00862680 /* BFDDatabaseAccess.m */,
+				23F3095119A7166D00862680 /* Blackfoot Dictionary-Bridging-Header.h */,
+				23F3095419A716F900862680 /* BFDDatabaseAccess.h */,
 			);
 			path = "Blackfoot Dictionary";
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F3093219A6BA6000862680 /* MainViewController.swift in Sources */,
+				23F3095319A7166D00862680 /* BFDDatabaseAccess.m in Sources */,
 				23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */,
 				23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */,
 			);
@@ -330,9 +338,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot Dictionary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -342,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot Dictionary-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
