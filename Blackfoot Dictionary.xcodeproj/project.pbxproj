@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3092F19A6BA6000862680 /* AppDelegate.swift */; };
-		23F3093219A6BA6000862680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3093119A6BA6000862680 /* ViewController.swift */; };
+		23F3093219A6BA6000862680 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3093119A6BA6000862680 /* MainViewController.swift */; };
 		23F3093519A6BA6000862680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093319A6BA6000862680 /* Main.storyboard */; };
 		23F3093719A6BA6000862680 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093619A6BA6000862680 /* Images.xcassets */; };
 		23F3094319A6BA6000862680 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */; };
+		23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094C19A6C60600862680 /* TranslateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +29,13 @@
 		23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackfoot Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3092E19A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F3092F19A6BA6000862680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23F3093119A6BA6000862680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23F3093119A6BA6000862680 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23F3093419A6BA6000862680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23F3093619A6BA6000862680 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23F3093C19A6BA6000862680 /* Blackfoot DictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blackfoot DictionaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3094119A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
+		23F3094C19A6C60600862680 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				23F3092F19A6BA6000862680 /* AppDelegate.swift */,
-				23F3093119A6BA6000862680 /* ViewController.swift */,
+				23F3093119A6BA6000862680 /* MainViewController.swift */,
 				23F3093319A6BA6000862680 /* Main.storyboard */,
 				23F3093619A6BA6000862680 /* Images.xcassets */,
 				23F3092D19A6BA6000862680 /* Supporting Files */,
+				23F3094C19A6C60600862680 /* TranslateViewController.swift */,
 			);
 			path = "Blackfoot Dictionary";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 		23F3092219A6BA6000862680 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BFD;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Hierarchy;
 				TargetAttributes = {
@@ -208,8 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F3093219A6BA6000862680 /* ViewController.swift in Sources */,
+				23F3093219A6BA6000862680 /* MainViewController.swift in Sources */,
 				23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */,
+				23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +333,7 @@
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -339,6 +345,7 @@
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
