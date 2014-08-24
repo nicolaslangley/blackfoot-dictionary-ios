@@ -13,7 +13,9 @@
 		23F3093719A6BA6000862680 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093619A6BA6000862680 /* Images.xcassets */; };
 		23F3094319A6BA6000862680 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */; };
 		23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094C19A6C60600862680 /* TranslateViewController.swift */; };
-		23F3095319A7166D00862680 /* BFDDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3095219A7166D00862680 /* BFDDatabaseAccess.m */; };
+		23F3B12219A7F0F8005134D0 /* blkft-dictionary.db in Resources */ = {isa = PBXBuildFile; fileRef = 23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */; };
+		23F3B13A19A7F8C3005134D0 /* DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */; };
+		5AEA0A129ED84975AEBFDD25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9589A12F35547B28B91D044 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,11 @@
 		23F3094119A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
 		23F3094C19A6C60600862680 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
-		23F3095119A7166D00862680 /* Blackfoot Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blackfoot Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
-		23F3095219A7166D00862680 /* BFDDatabaseAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDDatabaseAccess.m; sourceTree = "<group>"; };
-		23F3095419A716F900862680 /* BFDDatabaseAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFDDatabaseAccess.h; sourceTree = "<group>"; };
+		23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blkft-dictionary.db"; sourceTree = "<group>"; };
+		23F3B13819A7F653005134D0 /* Blackfoot_Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blackfoot_Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccess.swift; sourceTree = "<group>"; };
+		74B8EF06242C4C73884CF929 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D9589A12F35547B28B91D044 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEA0A129ED84975AEBFDD25 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +68,12 @@
 		23F3092119A6BA6000862680 = {
 			isa = PBXGroup;
 			children = (
+				23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */,
 				23F3092C19A6BA6000862680 /* Blackfoot Dictionary */,
 				23F3093F19A6BA6000862680 /* Blackfoot DictionaryTests */,
 				23F3092B19A6BA6000862680 /* Products */,
+				74B8EF06242C4C73884CF929 /* Pods.xcconfig */,
+				54DAE921F2E0498C815D54B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,9 +95,8 @@
 				23F3093619A6BA6000862680 /* Images.xcassets */,
 				23F3092D19A6BA6000862680 /* Supporting Files */,
 				23F3094C19A6C60600862680 /* TranslateViewController.swift */,
-				23F3095219A7166D00862680 /* BFDDatabaseAccess.m */,
-				23F3095119A7166D00862680 /* Blackfoot Dictionary-Bridging-Header.h */,
-				23F3095419A716F900862680 /* BFDDatabaseAccess.h */,
+				23F3B13819A7F653005134D0 /* Blackfoot_Dictionary-Bridging-Header.h */,
+				23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */,
 			);
 			path = "Blackfoot Dictionary";
 			sourceTree = "<group>";
@@ -119,6 +126,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		54DAE921F2E0498C815D54B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9589A12F35547B28B91D044 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23F3094619A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot Dictionary" */;
 			buildPhases = (
+				A5393BFB46FA436C99D80038 /* Check Pods Manifest.lock */,
 				23F3092619A6BA6000862680 /* Sources */,
 				23F3092719A6BA6000862680 /* Frameworks */,
 				23F3092819A6BA6000862680 /* Resources */,
+				E9E867D55D6B451B95496ADC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +219,7 @@
 			files = (
 				23F3093519A6BA6000862680 /* Main.storyboard in Resources */,
 				23F3093719A6BA6000862680 /* Images.xcassets in Resources */,
+				23F3B12219A7F0F8005134D0 /* blkft-dictionary.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,13 +232,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5393BFB46FA436C99D80038 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E867D55D6B451B95496ADC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23F3092619A6BA6000862680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F3B13A19A7F8C3005134D0 /* DatabaseAccess.swift in Sources */,
 				23F3093219A6BA6000862680 /* MainViewController.swift in Sources */,
-				23F3095319A7166D00862680 /* BFDDatabaseAccess.m in Sources */,
 				23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */,
 				23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */,
 			);
@@ -335,6 +386,7 @@
 		};
 		23F3094719A6BA6000862680 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74B8EF06242C4C73884CF929 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -342,7 +394,8 @@
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot Dictionary-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -350,6 +403,7 @@
 		};
 		23F3094819A6BA6000862680 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74B8EF06242C4C73884CF929 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -357,7 +411,8 @@
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot Dictionary-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -415,6 +470,7 @@
 				23F3094819A6BA6000862680 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23F3094919A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot DictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +479,7 @@
 				23F3094B19A6BA6000862680 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

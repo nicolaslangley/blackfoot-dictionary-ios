@@ -19,9 +19,13 @@ class TranslateViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.title = "Translate"
+        
         // Display the translated text (in this case just a default placeholder)
-        outputTextLabel.text = inputText
-        outputTextLabel.textAlignment = NSTextAlignment.Center
+        //outputTextLabel.textAlignment = NSTextAlignment.Center
+        outputTextLabel.numberOfLines = 0
+        outputTextLabel.adjustsFontSizeToFitWidth = true
+        translateWord(inputText)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,16 +38,12 @@ class TranslateViewController: UIViewController {
         inputText = input
     }
     
-    // Database functions
-    
-    func openDatabase() {
-        
-        
-        
+    func translateWord(word: String) {
+        // Compose a SQL query for this string
+        let sql_query = "SELECT * FROM words WHERE gloss LIKE \"% " + word + "%\""
+        let outputData = DatabaseAccess.queryDatabase(sql_query)
+        outputTextLabel.text = outputData
     }
-
-    
-    
     
 }
 
