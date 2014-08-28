@@ -24,3 +24,15 @@
 #define COCOAPODS_VERSION_MINOR_FMDB_standard 3
 #define COCOAPODS_VERSION_PATCH_FMDB_standard 0
 
+// sqlite3
+#define COCOAPODS_POD_AVAILABLE_sqlite3
+#define COCOAPODS_VERSION_MAJOR_sqlite3 3
+#define COCOAPODS_VERSION_MINOR_sqlite3 8
+#define COCOAPODS_VERSION_PATCH_sqlite3 6
+
+// sqlite3/common
+#define COCOAPODS_POD_AVAILABLE_sqlite3_common
+#define COCOAPODS_VERSION_MAJOR_sqlite3_common 3
+#define COCOAPODS_VERSION_MINOR_sqlite3_common 8
+#define COCOAPODS_VERSION_PATCH_sqlite3_common 6
+

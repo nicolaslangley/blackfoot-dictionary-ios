@@ -30,7 +30,7 @@ class DatabaseAccess {
         }
     }
     
-    // Return the result of the query to the database
+    // Return the result of the query to the database in the form of a string
     class func queryDatabase(sql_query: String) -> String {
         
         var resultString: String = ""
@@ -60,11 +60,13 @@ class DatabaseAccess {
             exit(1)
         }
         
-        // Iterate through results and store in dictionary
+        // Iterate through results
         while result.next() {
             resultString = resultString + result.stringForColumn("stem") + " - " + result.stringForColumn("gloss") + "\n\n"
         }
-        println(resultString)
+        
+        // Remove any $ characters
+        resultString = resultString.stringByReplacingOccurrencesOfString("$", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         return resultString
     }
     

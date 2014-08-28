@@ -4,11 +4,16 @@ PODS:
   - FMDB/common (2.3)
   - FMDB/standard (2.3):
     - FMDB/common
+  - sqlite3 (3.8.6):
+    - sqlite3/common
+  - sqlite3/common (3.8.6)
 
 DEPENDENCIES:
   - FMDB (~> 2.3)
+  - sqlite3 (~> 3.8)
 
 SPEC CHECKSUMS:
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  sqlite3: 170bf094e597765aaa5d3d312a7b222a6f8ab6f0
 
 COCOAPODS: 0.33.1

@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3092F19A6BA6000862680 /* AppDelegate.swift */; };
-		23F3093219A6BA6000862680 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3093119A6BA6000862680 /* MainViewController.swift */; };
-		23F3093519A6BA6000862680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093319A6BA6000862680 /* Main.storyboard */; };
-		23F3093719A6BA6000862680 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F3093619A6BA6000862680 /* Images.xcassets */; };
-		23F3094319A6BA6000862680 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */; };
-		23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3094C19A6C60600862680 /* TranslateViewController.swift */; };
+		23E5C90F19AEF60D00D4C305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90319AEF60D00D4C305 /* AppDelegate.swift */; };
+		23E5C91019AEF60D00D4C305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90419AEF60D00D4C305 /* Main.storyboard */; };
+		23E5C91119AEF60D00D4C305 /* DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */; };
+		23E5C91219AEF60D00D4C305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90819AEF60D00D4C305 /* Images.xcassets */; };
+		23E5C91319AEF60D00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90919AEF60D00D4C305 /* Info.plist */; };
+		23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90A19AEF60D00D4C305 /* MainViewController.swift */; };
+		23E5C91519AEF60D00D4C305 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */; };
+		23E5C91B19AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */; };
+		23E5C91C19AEF62C00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C91A19AEF62C00D4C305 /* Info.plist */; };
 		23F3B12219A7F0F8005134D0 /* blkft-dictionary.db in Resources */ = {isa = PBXBuildFile; fileRef = 23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */; };
-		23F3B13A19A7F8C3005134D0 /* DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */; };
 		5AEA0A129ED84975AEBFDD25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9589A12F35547B28B91D044 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -29,19 +31,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackfoot Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23F3092E19A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23F3092F19A6BA6000862680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23F3093119A6BA6000862680 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		23F3093419A6BA6000862680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23F3093619A6BA6000862680 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		23F3093C19A6BA6000862680 /* Blackfoot DictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blackfoot DictionaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23F3094119A6BA6000862680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
-		23F3094C19A6C60600862680 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		23E5C90319AEF60D00D4C305 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23E5C90519AEF60D00D4C305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23E5C90619AEF60D00D4C305 /* Blackfoot_Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blackfoot_Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccess.swift; sourceTree = "<group>"; };
+		23E5C90819AEF60D00D4C305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		23E5C90919AEF60D00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E5C90A19AEF60D00D4C305 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
+		23E5C91A19AEF62C00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F3092A19A6BA6000862680 /* BlackfootDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackfootDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blkft-dictionary.db"; sourceTree = "<group>"; };
-		23F3B13819A7F653005134D0 /* Blackfoot_Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blackfoot_Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
-		23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccess.swift; sourceTree = "<group>"; };
 		74B8EF06242C4C73884CF929 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D9589A12F35547B28B91D044 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,12 +67,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23E5C90219AEF60D00D4C305 /* BlackfootDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				23E5C90319AEF60D00D4C305 /* AppDelegate.swift */,
+				23E5C90419AEF60D00D4C305 /* Main.storyboard */,
+				23E5C90619AEF60D00D4C305 /* Blackfoot_Dictionary-Bridging-Header.h */,
+				23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */,
+				23E5C90819AEF60D00D4C305 /* Images.xcassets */,
+				23E5C90919AEF60D00D4C305 /* Info.plist */,
+				23E5C90A19AEF60D00D4C305 /* MainViewController.swift */,
+				23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */,
+			);
+			path = BlackfootDictionary;
+			sourceTree = "<group>";
+		};
+		23E5C91819AEF62C00D4C305 /* BlackfootDictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */,
+				23E5C91A19AEF62C00D4C305 /* Info.plist */,
+			);
+			path = BlackfootDictionaryTests;
+			sourceTree = "<group>";
+		};
 		23F3092119A6BA6000862680 = {
 			isa = PBXGroup;
 			children = (
+				23E5C91819AEF62C00D4C305 /* BlackfootDictionaryTests */,
+				23E5C90219AEF60D00D4C305 /* BlackfootDictionary */,
 				23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */,
-				23F3092C19A6BA6000862680 /* Blackfoot Dictionary */,
-				23F3093F19A6BA6000862680 /* Blackfoot DictionaryTests */,
 				23F3092B19A6BA6000862680 /* Products */,
 				74B8EF06242C4C73884CF929 /* Pods.xcconfig */,
 				54DAE921F2E0498C815D54B6 /* Frameworks */,
@@ -80,50 +106,10 @@
 		23F3092B19A6BA6000862680 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */,
-				23F3093C19A6BA6000862680 /* Blackfoot DictionaryTests.xctest */,
+				23F3092A19A6BA6000862680 /* BlackfootDictionary.app */,
+				23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		23F3092C19A6BA6000862680 /* Blackfoot Dictionary */ = {
-			isa = PBXGroup;
-			children = (
-				23F3092F19A6BA6000862680 /* AppDelegate.swift */,
-				23F3093119A6BA6000862680 /* MainViewController.swift */,
-				23F3093319A6BA6000862680 /* Main.storyboard */,
-				23F3093619A6BA6000862680 /* Images.xcassets */,
-				23F3092D19A6BA6000862680 /* Supporting Files */,
-				23F3094C19A6C60600862680 /* TranslateViewController.swift */,
-				23F3B13819A7F653005134D0 /* Blackfoot_Dictionary-Bridging-Header.h */,
-				23F3B13919A7F8C3005134D0 /* DatabaseAccess.swift */,
-			);
-			path = "Blackfoot Dictionary";
-			sourceTree = "<group>";
-		};
-		23F3092D19A6BA6000862680 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				23F3092E19A6BA6000862680 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		23F3093F19A6BA6000862680 /* Blackfoot DictionaryTests */ = {
-			isa = PBXGroup;
-			children = (
-				23F3094219A6BA6000862680 /* Blackfoot_DictionaryTests.swift */,
-				23F3094019A6BA6000862680 /* Supporting Files */,
-			);
-			path = "Blackfoot DictionaryTests";
-			sourceTree = "<group>";
-		};
-		23F3094019A6BA6000862680 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				23F3094119A6BA6000862680 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		54DAE921F2E0498C815D54B6 /* Frameworks */ = {
@@ -137,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23F3092919A6BA6000862680 /* Blackfoot Dictionary */ = {
+		23F3092919A6BA6000862680 /* BlackfootDictionary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23F3094619A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot Dictionary" */;
+			buildConfigurationList = 23F3094619A6BA6000862680 /* Build configuration list for PBXNativeTarget "BlackfootDictionary" */;
 			buildPhases = (
 				A5393BFB46FA436C99D80038 /* Check Pods Manifest.lock */,
 				23F3092619A6BA6000862680 /* Sources */,
@@ -151,14 +137,14 @@
 			);
 			dependencies = (
 			);
-			name = "Blackfoot Dictionary";
+			name = BlackfootDictionary;
 			productName = "Blackfoot Dictionary";
-			productReference = 23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */;
+			productReference = 23F3092A19A6BA6000862680 /* BlackfootDictionary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		23F3093B19A6BA6000862680 /* Blackfoot DictionaryTests */ = {
+		23F3093B19A6BA6000862680 /* BlackfootDictionaryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23F3094919A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot DictionaryTests" */;
+			buildConfigurationList = 23F3094919A6BA6000862680 /* Build configuration list for PBXNativeTarget "BlackfootDictionaryTests" */;
 			buildPhases = (
 				23F3093819A6BA6000862680 /* Sources */,
 				23F3093919A6BA6000862680 /* Frameworks */,
@@ -169,9 +155,9 @@
 			dependencies = (
 				23F3093E19A6BA6000862680 /* PBXTargetDependency */,
 			);
-			name = "Blackfoot DictionaryTests";
+			name = BlackfootDictionaryTests;
 			productName = "Blackfoot DictionaryTests";
-			productReference = 23F3093C19A6BA6000862680 /* Blackfoot DictionaryTests.xctest */;
+			productReference = 23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23F3092519A6BA6000862680 /* Build configuration list for PBXProject "Blackfoot Dictionary" */;
+			buildConfigurationList = 23F3092519A6BA6000862680 /* Build configuration list for PBXProject "BlackfootDictionary" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -206,8 +192,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23F3092919A6BA6000862680 /* Blackfoot Dictionary */,
-				23F3093B19A6BA6000862680 /* Blackfoot DictionaryTests */,
+				23F3092919A6BA6000862680 /* BlackfootDictionary */,
+				23F3093B19A6BA6000862680 /* BlackfootDictionaryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,9 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F3093519A6BA6000862680 /* Main.storyboard in Resources */,
-				23F3093719A6BA6000862680 /* Images.xcassets in Resources */,
+				23E5C91319AEF60D00D4C305 /* Info.plist in Resources */,
+				23E5C91219AEF60D00D4C305 /* Images.xcassets in Resources */,
 				23F3B12219A7F0F8005134D0 /* blkft-dictionary.db in Resources */,
+				23E5C91019AEF60D00D4C305 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E5C91C19AEF62C00D4C305 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,10 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F3B13A19A7F8C3005134D0 /* DatabaseAccess.swift in Sources */,
-				23F3093219A6BA6000862680 /* MainViewController.swift in Sources */,
-				23F3093019A6BA6000862680 /* AppDelegate.swift in Sources */,
-				23F3094D19A6C60600862680 /* TranslateViewController.swift in Sources */,
+				23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */,
+				23E5C91519AEF60D00D4C305 /* TranslateViewController.swift in Sources */,
+				23E5C91119AEF60D00D4C305 /* DatabaseAccess.swift in Sources */,
+				23E5C90F19AEF60D00D4C305 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F3094319A6BA6000862680 /* Blackfoot_DictionaryTests.swift in Sources */,
+				23E5C91B19AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +278,16 @@
 /* Begin PBXTargetDependency section */
 		23F3093E19A6BA6000862680 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 23F3092919A6BA6000862680 /* Blackfoot Dictionary */;
+			target = 23F3092919A6BA6000862680 /* BlackfootDictionary */;
 			targetProxy = 23F3093D19A6BA6000862680 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		23F3093319A6BA6000862680 /* Main.storyboard */ = {
+		23E5C90419AEF60D00D4C305 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				23F3093419A6BA6000862680 /* Base */,
+				23E5C90519AEF60D00D4C305 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -393,7 +381,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackfootDictionary;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -410,7 +398,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackfootDictionary;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -431,7 +419,7 @@
 				);
 				INFOPLIST_FILE = "Blackfoot DictionaryTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackfootDictionaryTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
 			};
 			name = Debug;
@@ -446,7 +434,7 @@
 				);
 				INFOPLIST_FILE = "Blackfoot DictionaryTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackfootDictionaryTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
 			};
 			name = Release;
@@ -454,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23F3092519A6BA6000862680 /* Build configuration list for PBXProject "Blackfoot Dictionary" */ = {
+		23F3092519A6BA6000862680 /* Build configuration list for PBXProject "BlackfootDictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23F3094419A6BA6000862680 /* Debug */,
@@ -463,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23F3094619A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot Dictionary" */ = {
+		23F3094619A6BA6000862680 /* Build configuration list for PBXNativeTarget "BlackfootDictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23F3094719A6BA6000862680 /* Debug */,
@@ -472,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23F3094919A6BA6000862680 /* Build configuration list for PBXNativeTarget "Blackfoot DictionaryTests" */ = {
+		23F3094919A6BA6000862680 /* Build configuration list for PBXNativeTarget "BlackfootDictionaryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23F3094A19A6BA6000862680 /* Debug */,
