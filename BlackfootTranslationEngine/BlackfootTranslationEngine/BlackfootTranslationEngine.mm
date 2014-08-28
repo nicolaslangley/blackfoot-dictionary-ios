@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Hierarchy. All rights reserved.
 //
 
-#import "Blackfoot_Translation_Engine.h"
+#import "BlackfootTranslationEngine.h"
 
-@implementation Blackfoot_Translation_Engine
+@implementation BlackfootTranslationEngine
 
 - (NSString *) queryDatabase:(NSString *)word databasePath:(NSString *)dbPath  {
     // Conversion from Objective-C to C++

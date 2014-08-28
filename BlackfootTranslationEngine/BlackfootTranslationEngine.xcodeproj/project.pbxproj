@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23E5C92019AEF6A600D4C305 /* Blackfoot_Translation_Engine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C91F19AEF6A600D4C305 /* Blackfoot_Translation_Engine.mm */; };
+		23E5C92019AEF6A600D4C305 /* BlackfootTranslationEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C91F19AEF6A600D4C305 /* BlackfootTranslationEngine.mm */; };
 		23E5C92319AEF6AC00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C92219AEF6AC00D4C305 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		23A33C1919AEEAD700A9267D /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlackfootTranslationEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A33C2419AEEAD700A9267D /* BlackfootTranslationEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootTranslationEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E5C91E19AEF6A600D4C305 /* Blackfoot_Translation_Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blackfoot_Translation_Engine.h; sourceTree = "<group>"; };
-		23E5C91F19AEF6A600D4C305 /* Blackfoot_Translation_Engine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Blackfoot_Translation_Engine.mm; sourceTree = "<group>"; };
+		23E5C91E19AEF6A600D4C305 /* BlackfootTranslationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackfootTranslationEngine.h; sourceTree = "<group>"; };
+		23E5C91F19AEF6A600D4C305 /* BlackfootTranslationEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackfootTranslationEngine.mm; sourceTree = "<group>"; };
 		23E5C92219AEF6AC00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +70,8 @@
 		23E5C91D19AEF6A600D4C305 /* BlackfootTranslationEngine */ = {
 			isa = PBXGroup;
 			children = (
-				23E5C91E19AEF6A600D4C305 /* Blackfoot_Translation_Engine.h */,
-				23E5C91F19AEF6A600D4C305 /* Blackfoot_Translation_Engine.mm */,
+				23E5C91E19AEF6A600D4C305 /* BlackfootTranslationEngine.h */,
+				23E5C91F19AEF6A600D4C305 /* BlackfootTranslationEngine.mm */,
 			);
 			path = BlackfootTranslationEngine;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E5C92019AEF6A600D4C305 /* Blackfoot_Translation_Engine.mm in Sources */,
+				23E5C92019AEF6A600D4C305 /* BlackfootTranslationEngine.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

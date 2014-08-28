@@ -16,7 +16,7 @@
 #include <string.h>
 #include <sqlite3.h>
 
-@interface Blackfoot_Translation_Engine : NSObject {}
+@interface BlackfootTranslationEngine : NSObject {}
 
 - (NSString *) queryDatabase:(NSString *) word databasePath:(NSString *) dbPath;
 
