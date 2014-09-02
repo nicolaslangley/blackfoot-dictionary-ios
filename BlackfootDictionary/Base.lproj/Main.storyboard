@@ -36,6 +36,15 @@
                                     <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38b-hv-3QC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-m4-GdV">
+                                <rect key="frame" x="111" y="343" width="99" height="30"/>
+                                <state key="normal" title="Random Word">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomWordButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9QV-u2-bGy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -43,6 +52,7 @@
                     <connections>
                         <outlet property="inputTextField" destination="uux-dX-XcJ" id="eAC-Jx-Vdf"/>
                         <segue destination="9f9-82-H4y" kind="push" identifier="TranslateSegue" id="MGU-UA-9NF"/>
+                        <segue destination="9PM-Vd-U3D" kind="push" identifier="RandomWordSegue" id="ure-e9-khD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -77,7 +87,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0p-Xe-n4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="-404"/>
+            <point key="canvasLocation" x="390" y="-694"/>
+        </scene>
+        <!--Random Word View Controller-->
+        <scene sceneID="yAb-5E-ICf">
+            <objects>
+                <viewController id="9PM-Vd-U3D" customClass="RandomWordViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="91p-Bj-KqB"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlf-wT-V9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N7J-QW-7CA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-s5-zjq" userLabel="Ouput Label">
+                                <rect key="frame" x="26" y="97" width="269" height="451"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gLP-sR-yZk"/>
+                    <connections>
+                        <outlet property="outputTextLabel" destination="M5V-s5-zjq" id="ibH-Gu-lt6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPQ-vI-i3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3l0-MA-FxV">

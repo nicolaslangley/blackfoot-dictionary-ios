@@ -12,10 +12,17 @@ import Foundation
 class TranslationEngineWrapper {
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryDatabase(inputWord: String) -> String {
+    class func queryMatches(inputWord: String) -> String {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultString = BFDTranslationEngine.queryDatabase(inputWord, databasePath: dbPath, itemsToReturn: 0);
+        let resultString = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0)
+        return resultString!
+    }
+    
+    class func queryRandomWord() -> String {
+        // Get path to database and then call BFDTranslationEngine function
+        let dbPath = DatabaseUtility.getDBPath()
+        let resultString = BFDTranslationEngine.queryRandomWord(dbPath)
         return resultString!
     }
     

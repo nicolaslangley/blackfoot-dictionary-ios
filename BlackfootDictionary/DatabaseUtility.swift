@@ -16,6 +16,7 @@ class DatabaseUtility {
         return documentsPath.stringByAppendingPathComponent("blkft-dictionary.db")
     }
     
+    // Copy database into resources
     class func copyDatabase() {
         let fileManager = NSFileManager.defaultManager()
         let dbPath = DatabaseUtility.getDBPath()

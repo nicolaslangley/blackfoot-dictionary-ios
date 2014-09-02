@@ -17,18 +17,18 @@
 #include <string.h>
 #include <sqlite3.h>
 
+
 @implementation BFDTranslationEngine
 
-+ (NSString *) queryDatabase:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count  {
+
++ (NSString *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath  {
     // Conversion from Objective-C to C++
     const char *db_path = [dbPath UTF8String];
-    const char *input_word = [word UTF8String];
-    // If count is 0, then all records are returned
-    int record_count = (int)count;
+    const char *input_query = [sqlQuery UTF8String];
     
     sqlite3 *db;
     int sql_result;
-    std::string count_string = "";
+    std::string sql_query = std::string(input_query);
     std::string result_string = "";
     std::stringstream result_stream;
     
@@ -54,17 +54,6 @@
         // Objective-C
         return [NSString stringWithUTF8String:result_string.c_str()];
     }
-    
-    // Compose the sql query based on the word
-    std::stringstream query_stream;
-    query_stream << "SELECT * FROM words WHERE gloss LIKE \"% " << input_word << "%\" OR gloss LIKE \"%$" << input_word << "%\"";
-    if (record_count != 0) {
-        std::stringstream convert_stream;
-        convert_stream << record_count;
-        count_string = convert_stream.str();
-        query_stream << " LIMIT " << count_string;
-    }
-    std::string sql_query = query_stream.str();
     
     // Execute query
     sqlite3_stmt *statement;
@@ -92,6 +81,42 @@
     // This is Objective-C
     return [NSString stringWithUTF8String:result_string.c_str()];
 }
+
+// This function returns the number of matches given by count and that have a phrase including the given word
++ (NSString *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
+    // Conversion from Objective-C to C++
+    const char *input_word = [word UTF8String];
+    // If count is 0, then all records are returned
+    int record_count = (int)count;
+    std::string count_string = "";
+    
+    // Compose the sql query based on the word and inputted count
+    std::stringstream query_stream;
+    query_stream << "SELECT * FROM words WHERE gloss LIKE \"% " << input_word << "%\" OR gloss LIKE \"%$" << input_word << "%\"";
+    if (record_count != 0) {
+        std::stringstream convert_stream;
+        convert_stream << record_count;
+        count_string = convert_stream.str();
+        query_stream << " LIMIT " << count_string;
+    }
+    std::string sql_query = query_stream.str();
+    
+    // Query the database with the query and return the result
+    return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
+}
+
+// This function queries a random blackfoot word
++ (NSString *) queryRandomWord:(NSString *) dbPath {
+    
+    // Compose the sql query based on the word and inputted count
+    std::stringstream query_stream;
+    query_stream << "SELECT * FROM words ORDER BY RANDOM() LIMIT 1";
+    std::string sql_query = query_stream.str();
+    
+    // Query the database with the query and return the result
+    return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
+}
+
 
 @end
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23DFAC7119AEFD2900D64755 /* BFDTranslationEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */; };
 		23DFAC7619B1322200D64755 /* TranslationEngineWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC7519B1322200D64755 /* TranslationEngineWrapper.swift */; };
+		23DFAC7819B68AF000D64755 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC7719B68AF000D64755 /* RandomWordViewController.swift */; };
 		23E5C90F19AEF60D00D4C305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90319AEF60D00D4C305 /* AppDelegate.swift */; };
 		23E5C91019AEF60D00D4C305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90419AEF60D00D4C305 /* Main.storyboard */; };
 		23E5C91119AEF60D00D4C305 /* DatabaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */; };
@@ -44,6 +45,7 @@
 		23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BFDTranslationEngine.mm; sourceTree = "<group>"; };
 		23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDTranslationEngine.h; sourceTree = "<group>"; };
 		23DFAC7519B1322200D64755 /* TranslationEngineWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationEngineWrapper.swift; sourceTree = "<group>"; };
+		23DFAC7719B68AF000D64755 /* RandomWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
 		23E5C90319AEF60D00D4C305 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E5C90519AEF60D00D4C305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23E5C90619AEF60D00D4C305 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */,
 				23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */,
 				23DFAC7519B1322200D64755 /* TranslationEngineWrapper.swift */,
+				23DFAC7719B68AF000D64755 /* RandomWordViewController.swift */,
 			);
 			path = BlackfootDictionary;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */,
 				23E5C91519AEF60D00D4C305 /* TranslateViewController.swift in Sources */,
+				23DFAC7819B68AF000D64755 /* RandomWordViewController.swift in Sources */,
 				23DFAC7119AEFD2900D64755 /* BFDTranslationEngine.mm in Sources */,
 				23DFAC7619B1322200D64755 /* TranslationEngineWrapper.swift in Sources */,
 				23E5C91119AEF60D00D4C305 /* DatabaseUtility.swift in Sources */,
