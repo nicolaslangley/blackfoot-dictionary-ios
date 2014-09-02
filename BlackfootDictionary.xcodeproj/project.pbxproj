@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23DFAC7119AEFD2900D64755 /* BFDTranslationEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */; };
+		23DFAC7619B1322200D64755 /* TranslationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC7519B1322200D64755 /* TranslationEngine.swift */; };
 		23E5C90F19AEF60D00D4C305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90319AEF60D00D4C305 /* AppDelegate.swift */; };
 		23E5C91019AEF60D00D4C305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90419AEF60D00D4C305 /* Main.storyboard */; };
-		23E5C91119AEF60D00D4C305 /* DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */; };
+		23E5C91119AEF60D00D4C305 /* DatabaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */; };
 		23E5C91219AEF60D00D4C305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90819AEF60D00D4C305 /* Images.xcassets */; };
 		23E5C91319AEF60D00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90919AEF60D00D4C305 /* Info.plist */; };
 		23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90A19AEF60D00D4C305 /* MainViewController.swift */; };
@@ -21,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		23DFAC7319AF00FF00D64755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F3092219A6BA6000862680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23F3092919A6BA6000862680;
+			remoteInfo = BlackfootDictionary;
+		};
 		23F3093D19A6BA6000862680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23F3092219A6BA6000862680 /* Project object */;
@@ -31,17 +40,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlackfootTranslationEngine.a; path = "BlackfootTranslationEngine/build/Debug-iphoneos/libBlackfootTranslationEngine.a"; sourceTree = "<group>"; };
+		23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BFDTranslationEngine.mm; sourceTree = "<group>"; };
+		23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDTranslationEngine.h; sourceTree = "<group>"; };
+		23DFAC7519B1322200D64755 /* TranslationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationEngine.swift; sourceTree = "<group>"; };
 		23E5C90319AEF60D00D4C305 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E5C90519AEF60D00D4C305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23E5C90619AEF60D00D4C305 /* Blackfoot_Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blackfoot_Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
-		23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccess.swift; sourceTree = "<group>"; };
+		23E5C90619AEF60D00D4C305 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtility.swift; sourceTree = "<group>"; };
 		23E5C90819AEF60D00D4C305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23E5C90919AEF60D00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23E5C90A19AEF60D00D4C305 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
 		23E5C91A19AEF62C00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23F3092A19A6BA6000862680 /* BlackfootDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackfootDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackfoot Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blkft-dictionary.db"; sourceTree = "<group>"; };
 		74B8EF06242C4C73884CF929 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -72,12 +85,15 @@
 			children = (
 				23E5C90319AEF60D00D4C305 /* AppDelegate.swift */,
 				23E5C90419AEF60D00D4C305 /* Main.storyboard */,
-				23E5C90619AEF60D00D4C305 /* Blackfoot_Dictionary-Bridging-Header.h */,
-				23E5C90719AEF60D00D4C305 /* DatabaseAccess.swift */,
+				23E5C90619AEF60D00D4C305 /* BlackfootDictionary-Bridging-Header.h */,
+				23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */,
 				23E5C90819AEF60D00D4C305 /* Images.xcassets */,
 				23E5C90919AEF60D00D4C305 /* Info.plist */,
 				23E5C90A19AEF60D00D4C305 /* MainViewController.swift */,
 				23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */,
+				23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */,
+				23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */,
+				23DFAC7519B1322200D64755 /* TranslationEngine.swift */,
 			);
 			path = BlackfootDictionary;
 			sourceTree = "<group>";
@@ -106,7 +122,7 @@
 		23F3092B19A6BA6000862680 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23F3092A19A6BA6000862680 /* BlackfootDictionary.app */,
+				23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */,
 				23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */,
 			);
 			name = Products;
@@ -115,6 +131,7 @@
 		54DAE921F2E0498C815D54B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */,
 				D9589A12F35547B28B91D044 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -139,7 +156,7 @@
 			);
 			name = BlackfootDictionary;
 			productName = "Blackfoot Dictionary";
-			productReference = 23F3092A19A6BA6000862680 /* BlackfootDictionary.app */;
+			productReference = 23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */;
 			productType = "com.apple.product-type.application";
 		};
 		23F3093B19A6BA6000862680 /* BlackfootDictionaryTests */ = {
@@ -154,6 +171,7 @@
 			);
 			dependencies = (
 				23F3093E19A6BA6000862680 /* PBXTargetDependency */,
+				23DFAC7419AF00FF00D64755 /* PBXTargetDependency */,
 			);
 			name = BlackfootDictionaryTests;
 			productName = "Blackfoot DictionaryTests";
@@ -260,7 +278,9 @@
 			files = (
 				23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */,
 				23E5C91519AEF60D00D4C305 /* TranslateViewController.swift in Sources */,
-				23E5C91119AEF60D00D4C305 /* DatabaseAccess.swift in Sources */,
+				23DFAC7119AEFD2900D64755 /* BFDTranslationEngine.mm in Sources */,
+				23DFAC7619B1322200D64755 /* TranslationEngine.swift in Sources */,
+				23E5C91119AEF60D00D4C305 /* DatabaseUtility.swift in Sources */,
 				23E5C90F19AEF60D00D4C305 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +296,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		23DFAC7419AF00FF00D64755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23F3092919A6BA6000862680 /* BlackfootDictionary */;
+			targetProxy = 23DFAC7319AF00FF00D64755 /* PBXContainerItemProxy */;
+		};
 		23F3093E19A6BA6000862680 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 23F3092919A6BA6000862680 /* BlackfootDictionary */;
@@ -379,13 +404,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlackfootDictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BlackfootDictionary;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BlackfootTranslationEngine/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "Blackfoot Dictionary";
 				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlackfootDictionary/BlackfootDictionary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -396,12 +426,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Blackfoot Dictionary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlackfootDictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BlackfootDictionary;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BlackfootTranslationEngine/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "Blackfoot Dictionary";
 				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blackfoot Dictionary/Blackfoot_Dictionary-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlackfootDictionary/BlackfootDictionary-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -417,10 +452,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Blackfoot DictionaryTests/Info.plist";
+				INFOPLIST_FILE = BlackfootDictionaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = BlackfootDictionaryTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackfootDictionary.app/BlackfootDictionary";
 			};
 			name = Debug;
 		};
@@ -432,10 +467,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Blackfoot DictionaryTests/Info.plist";
+				INFOPLIST_FILE = BlackfootDictionaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = BlackfootDictionaryTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlackfootDictionary.app/BlackfootDictionary";
 			};
 			name = Release;
 		};

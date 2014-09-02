@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Copy database over at application launch
-        DatabaseAccess.copyDatabase()
+        DatabaseUtility.copyDatabase()
         
         return true
     }

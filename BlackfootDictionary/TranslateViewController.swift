@@ -41,7 +41,7 @@ class TranslateViewController: UIViewController {
     func translateWord(word: String) {
         // Compose a SQL query for this string
         let sql_query = "SELECT * FROM words WHERE gloss LIKE \"% " + word + "%\" OR gloss LIKE \"%$" + word + "%\""
-        let outputData = DatabaseAccess.queryDatabase(sql_query)
+        let outputData = TranslationEngine.queryDatabase(sql_query)
         outputTextLabel.text = outputData
     }
     
