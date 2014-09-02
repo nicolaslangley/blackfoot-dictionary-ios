@@ -11,17 +11,9 @@
 
 #import <Foundation/Foundation.h>
 
-// C++ includes
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-#include <sqlite3.h>
-
 @interface BFDTranslationEngine : NSObject
 
-- (NSString *) queryDatabase:(NSString *) word databasePath:(NSString *) dbPath;
++ (NSString *) queryDatabase:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count;
 
 @end
 

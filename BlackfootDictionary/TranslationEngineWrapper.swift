@@ -1,0 +1,22 @@
+//
+//  TranslationEngine.swift
+//  BlackfootDictionary
+//
+//  Created by Nicolas Langley on 8/29/14.
+//  Copyright (c) 2014 Hierarchy. All rights reserved.
+//
+
+import Foundation
+
+
+class TranslationEngineWrapper {
+    
+    // Wrapper for query database function in BFDTranslationEngine
+    class func queryDatabase(inputWord: String) -> String {
+        // Get path to database and then call BFDTranslationEngine function
+        let dbPath = DatabaseUtility.getDBPath()
+        let resultString = BFDTranslationEngine.queryDatabase(inputWord, databasePath: dbPath, itemsToReturn: 0);
+        return resultString!
+    }
+    
+}
