@@ -9,7 +9,6 @@
 #ifndef BlackfootDictionary_Bridging_Header_h
 #define BlackfootDictionary_Bridging_Header_h
 
-#import "FMDB.h"
 #import "BFDTranslationEngine.h"
 
 #endif
