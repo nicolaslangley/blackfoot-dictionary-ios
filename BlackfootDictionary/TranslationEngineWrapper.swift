@@ -19,6 +19,7 @@ class TranslationEngineWrapper {
         return resultString!
     }
     
+    // Wrapper for random word function in BFDTranslationEngine
     class func queryRandomWord() -> String {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()

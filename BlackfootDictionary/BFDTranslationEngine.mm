@@ -20,7 +20,7 @@
 
 @implementation BFDTranslationEngine
 
-
+// This function takes a query and the path to the database and returns the result as a string
 + (NSString *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath  {
     // Conversion from Objective-C to C++
     const char *db_path = [dbPath UTF8String];

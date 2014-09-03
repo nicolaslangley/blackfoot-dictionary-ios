@@ -17,7 +17,7 @@
 		23E5C91319AEF60D00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C90919AEF60D00D4C305 /* Info.plist */; };
 		23E5C91419AEF60D00D4C305 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90A19AEF60D00D4C305 /* MainViewController.swift */; };
 		23E5C91519AEF60D00D4C305 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */; };
-		23E5C91B19AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */; };
+		23E5C91B19AEF62C00D4C305 /* BlackfootDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5C91919AEF62C00D4C305 /* BlackfootDictionaryTests.swift */; };
 		23E5C91C19AEF62C00D4C305 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5C91A19AEF62C00D4C305 /* Info.plist */; };
 		23F3B12219A7F0F8005134D0 /* blkft-dictionary.db in Resources */ = {isa = PBXBuildFile; fileRef = 23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */; };
 		5AEA0A129ED84975AEBFDD25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9589A12F35547B28B91D044 /* libPods.a */; };
@@ -54,11 +54,11 @@
 		23E5C90919AEF60D00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23E5C90A19AEF60D00D4C305 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
-		23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blackfoot_DictionaryTests.swift; sourceTree = "<group>"; };
+		23E5C91919AEF62C00D4C305 /* BlackfootDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackfootDictionaryTests.swift; sourceTree = "<group>"; };
 		23E5C91A19AEF62C00D4C305 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blackfoot Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3093C19A6BA6000862680 /* BlackfootDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blkft-dictionary.db"; sourceTree = "<group>"; };
+		23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blkft-dictionary.db"; path = "../blkft-dictionary.db"; sourceTree = "<group>"; };
 		74B8EF06242C4C73884CF929 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D9589A12F35547B28B91D044 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,21 +82,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23DFAC7919B7D7A400D64755 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23E5C90A19AEF60D00D4C305 /* MainViewController.swift */,
+				23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */,
+				23DFAC7719B68AF000D64755 /* RandomWordViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		23DFAC7A19B7D88300D64755 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */,
+				23E5C90419AEF60D00D4C305 /* Main.storyboard */,
+				23E5C90819AEF60D00D4C305 /* Images.xcassets */,
+				23E5C90919AEF60D00D4C305 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23DFAC7B19B7D8AB00D64755 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				23E5C90619AEF60D00D4C305 /* BlackfootDictionary-Bridging-Header.h */,
+				23E5C90319AEF60D00D4C305 /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		23DFAC7C19B7D8D400D64755 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */,
+				23DFAC7519B1322200D64755 /* TranslationEngineWrapper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		23DFAC7D19B7D96600D64755 /* TranslationEngine */ = {
+			isa = PBXGroup;
+			children = (
+				23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */,
+				23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */,
+			);
+			name = TranslationEngine;
+			path = BlackfootDictionary;
+			sourceTree = "<group>";
+		};
 		23E5C90219AEF60D00D4C305 /* BlackfootDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				23E5C90319AEF60D00D4C305 /* AppDelegate.swift */,
-				23E5C90419AEF60D00D4C305 /* Main.storyboard */,
-				23E5C90619AEF60D00D4C305 /* BlackfootDictionary-Bridging-Header.h */,
-				23E5C90719AEF60D00D4C305 /* DatabaseUtility.swift */,
-				23E5C90819AEF60D00D4C305 /* Images.xcassets */,
-				23E5C90919AEF60D00D4C305 /* Info.plist */,
-				23E5C90A19AEF60D00D4C305 /* MainViewController.swift */,
-				23E5C90B19AEF60D00D4C305 /* TranslateViewController.swift */,
-				23DFAC7019AEFD2900D64755 /* BFDTranslationEngine.mm */,
-				23DFAC7219AEFF4100D64755 /* BFDTranslationEngine.h */,
-				23DFAC7519B1322200D64755 /* TranslationEngineWrapper.swift */,
-				23DFAC7719B68AF000D64755 /* RandomWordViewController.swift */,
+				23DFAC7B19B7D8AB00D64755 /* Application */,
+				23DFAC7919B7D7A400D64755 /* Controllers */,
+				23DFAC7C19B7D8D400D64755 /* Helpers */,
+				23DFAC7A19B7D88300D64755 /* Resources */,
 			);
 			path = BlackfootDictionary;
 			sourceTree = "<group>";
@@ -104,7 +145,7 @@
 		23E5C91819AEF62C00D4C305 /* BlackfootDictionaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				23E5C91919AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift */,
+				23E5C91919AEF62C00D4C305 /* BlackfootDictionaryTests.swift */,
 				23E5C91A19AEF62C00D4C305 /* Info.plist */,
 			);
 			path = BlackfootDictionaryTests;
@@ -115,7 +156,7 @@
 			children = (
 				23E5C91819AEF62C00D4C305 /* BlackfootDictionaryTests */,
 				23E5C90219AEF60D00D4C305 /* BlackfootDictionary */,
-				23F3B12119A7F0F8005134D0 /* blkft-dictionary.db */,
+				23DFAC7D19B7D96600D64755 /* TranslationEngine */,
 				23F3092B19A6BA6000862680 /* Products */,
 				74B8EF06242C4C73884CF929 /* Pods.xcconfig */,
 				54DAE921F2E0498C815D54B6 /* Frameworks */,
@@ -293,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E5C91B19AEF62C00D4C305 /* Blackfoot_DictionaryTests.swift in Sources */,
+				23E5C91B19AEF62C00D4C305 /* BlackfootDictionaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

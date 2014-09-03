@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Blackfoot_DictionaryTests: XCTestCase {
+class BlackfootDictionaryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
