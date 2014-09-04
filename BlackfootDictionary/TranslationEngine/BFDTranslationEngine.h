@@ -16,6 +16,7 @@
 + (NSString *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count;
 + (NSString *) queryRandomWord:(NSString *) dbPath;
 + (NSString *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath;
++ (NSString *) convertToIPA:(NSString *) word;
 
 @end
 

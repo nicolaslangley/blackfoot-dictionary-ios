@@ -1,15 +1,15 @@
 //
-//  Blackfoot_DictionaryTests.swift
-//  Blackfoot DictionaryTests
+//  BlackfootDictionary_Tests.swift
+//  BlackfootDictionary Tests
 //
-//  Created by Nicolas Langley on 8/21/14.
+//  Created by Nicolas Langley on 9/3/14.
 //  Copyright (c) 2014 Hierarchy. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class BlackfootDictionaryTests: XCTestCase {
+class BlackfootDictionary_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

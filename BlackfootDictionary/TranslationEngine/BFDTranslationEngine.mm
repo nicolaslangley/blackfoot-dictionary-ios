@@ -117,6 +117,16 @@
     return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
 }
 
+// This function will take a blackfoot word and convert it to IPA
+// TODO: Finish implementing this function
++ (NSString *) convertToIPA:(NSString *) word {
+    // Convert from Objective-C to C++
+    const char *input_word = [word UTF8String];
+    std::string ipa_string = std::string(input_word);
+    ipa_string.replace(ipa_string.begin(), ipa_string.end(), "ai", "ə");
+    return [NSString stringWithUTF8String:ipa_string.c_str()];
+}
+
 
 @end
 

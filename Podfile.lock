@@ -1,1 +1,15 @@
+PODS:
+  - sqlite3 (3.8.6):
+    - sqlite3/common
+  - sqlite3/common (3.8.6)
+  - TWTSideMenuViewController (0.3)
+
+DEPENDENCIES:
+  - sqlite3 (~> 3.8)
+  - TWTSideMenuViewController (~> 0.3)
+
+SPEC CHECKSUMS:
+  sqlite3: 170bf094e597765aaa5d3d312a7b222a6f8ab6f0
+  TWTSideMenuViewController: 18633fb4be397ed1e83352ed50ddd55d04d94de3
+
 COCOAPODS: 0.33.1
