@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Action to perform for moving to translate view
         if (segue.identifier == "TranslateSegue") {
             var vc: TranslateViewController = segue.destinationViewController as TranslateViewController
