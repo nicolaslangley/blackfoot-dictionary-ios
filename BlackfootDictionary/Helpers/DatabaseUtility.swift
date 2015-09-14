@@ -12,7 +12,7 @@ class DatabaseUtility {
     
     // Retrieve the path to the database
     class func getDBPath() -> String {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         return documentsPath.stringByAppendingPathComponent("blkft-dictionary.db")
     }
     

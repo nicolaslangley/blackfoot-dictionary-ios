@@ -34,7 +34,7 @@ class TranslateViewController: UIViewController {
     }
     
     // Receive the input text value and store it
-    func setInputText(input : String) {
+    func setInputText(input : String, _nonojbc: () = ()) {
         inputText = input
     }
     
