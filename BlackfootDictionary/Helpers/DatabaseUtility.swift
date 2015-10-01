@@ -12,20 +12,21 @@ class DatabaseUtility {
     
     // Retrieve the path to the database
     class func getDBPath() -> String {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        return documentsPath.stringByAppendingPathComponent("blkft-dictionary.db")
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        return documentsURL.URLByAppendingPathComponent("blkft-dictionary.db").path!
     }
     
     // Copy database into resources
     class func copyDatabase() {
         let fileManager = NSFileManager.defaultManager()
         let dbPath = DatabaseUtility.getDBPath()
-        var success = fileManager.fileExistsAtPath(dbPath)
+        let success = fileManager.fileExistsAtPath(dbPath)
         if !success {
-            let defaultDBPath = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("blkft-dictionary.db")
-            success = fileManager.copyItemAtPath(defaultDBPath!, toPath: dbPath, error: nil)
-            if !success {
-                print("Failed to create writable database")
+            let defaultDBURL = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("blkft-dictionary.db")
+            do {
+                try fileManager.copyItemAtPath(defaultDBURL!.path!, toPath: dbPath)
+            } catch let error as NSError {
+                print(error.localizedDescription)
                 exit(1)
             }
         }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fQe-T9-JK3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fQe-T9-JK3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -12,23 +13,28 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uux-dX-XcJ" userLabel="Input Text Field">
-                                <rect key="frame" x="56" y="183" width="209" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter word to translate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heb-UW-lnN" userLabel="Title Label">
-                                <rect key="frame" x="70" y="106" width="180" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter word to translate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heb-UW-lnN" userLabel="Title Label">
+                                <rect key="frame" x="210" y="107" width="180" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mIm-NS-De4"/>
+                                    <constraint firstAttribute="width" constant="180" id="rnb-FF-khJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-TC-S9P" userLabel="Translate Button">
-                                <rect key="frame" x="129" y="262" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-TC-S9P" userLabel="Translate Button">
+                                <rect key="frame" x="264" y="247" width="73" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6T5-rb-1Qy"/>
+                                    <constraint firstAttribute="width" constant="73" id="vwe-Mm-azk"/>
+                                </constraints>
                                 <state key="normal" title="Translate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,8 +42,23 @@
                                     <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38b-hv-3QC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-m4-GdV">
-                                <rect key="frame" x="111" y="343" width="99" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uux-dX-XcJ" userLabel="Input Text Field">
+                                <rect key="frame" x="196" y="184" width="209" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="egA-ot-b7e"/>
+                                    <constraint firstAttribute="height" constant="30" id="tGJ-xm-Ycz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-m4-GdV">
+                                <rect key="frame" x="251" y="311" width="99" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DBU-3K-xfD"/>
+                                    <constraint firstAttribute="width" constant="99" id="hBb-a8-sUG"/>
+                                </constraints>
                                 <state key="normal" title="Random Word">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,18 +67,30 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uux-dX-XcJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Aj0-Un-z9e"/>
+                            <constraint firstItem="heb-UW-lnN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="43" id="HvQ-bi-ZLm"/>
+                            <constraint firstItem="9WH-m4-GdV" firstAttribute="top" secondItem="hXN-TC-S9P" secondAttribute="bottom" constant="34" id="RwV-AT-BHP"/>
+                            <constraint firstItem="heb-UW-lnN" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="U1v-db-voX"/>
+                            <constraint firstItem="uux-dX-XcJ" firstAttribute="top" secondItem="heb-UW-lnN" secondAttribute="bottom" constant="56" id="UyB-DG-qZR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9WH-m4-GdV" secondAttribute="bottom" constant="259" id="fbA-wc-NVf"/>
+                            <constraint firstItem="9WH-m4-GdV" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uiM-dd-Seg"/>
+                            <constraint firstItem="hXN-TC-S9P" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="vI9-ug-573"/>
+                            <constraint firstItem="hXN-TC-S9P" firstAttribute="top" secondItem="uux-dX-XcJ" secondAttribute="bottom" constant="33" id="x4L-aW-sal"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ovd-dI-4Hx"/>
                     <connections>
                         <outlet property="inputTextField" destination="uux-dX-XcJ" id="eAC-Jx-Vdf"/>
-                        <segue destination="9f9-82-H4y" kind="push" identifier="TranslateSegue" id="MGU-UA-9NF"/>
-                        <segue destination="9PM-Vd-U3D" kind="push" identifier="RandomWordSegue" id="ure-e9-khD"/>
+                        <segue destination="9f9-82-H4y" kind="show" identifier="TranslateSegue" id="MGU-UA-9NF"/>
+                        <segue destination="9PM-Vd-U3D" kind="show" identifier="RandomWordSegue" id="ure-e9-khD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="-404"/>
+            <point key="canvasLocation" x="-165" y="-427"/>
         </scene>
         <!--Translate View Controller-->
         <scene sceneID="bcg-3q-QaR">
@@ -68,16 +101,18 @@
                         <viewControllerLayoutGuide type="bottom" id="CqL-yj-4JQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pM3-si-LUk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOz-ur-8Gr" userLabel="Ouput Label">
                                 <rect key="frame" x="26" y="86" width="269" height="451"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wyj-OR-YOV"/>
@@ -87,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0p-Xe-n4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="-694"/>
+            <point key="canvasLocation" x="731.25" y="-733.09859154929575"/>
         </scene>
         <!--Random Word View Controller-->
         <scene sceneID="yAb-5E-ICf">
@@ -98,16 +133,18 @@
                         <viewControllerLayoutGuide type="bottom" id="qlf-wT-V9Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N7J-QW-7CA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-s5-zjq" userLabel="Ouput Label">
                                 <rect key="frame" x="26" y="97" width="269" height="451"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gLP-sR-yZk"/>
@@ -117,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPQ-vI-i3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="-64"/>
+            <point key="canvasLocation" x="731.25" y="-67.605633802816897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3l0-MA-FxV">
@@ -126,6 +163,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pmb-W6-OXl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="3EK-s1-9g3"/>
@@ -133,15 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9Q-9t-tzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-522" y="-404"/>
+            <point key="canvasLocation" x="-978.75" y="-426.76056338028167"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
-    </simulatedMetricsContainer>
 </document>

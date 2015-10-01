@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2305E32E1BBCAB1A0023E095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2305E32D1BBCAB1A0023E095 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		232203B31BA944C8006473A8 /* BlackfootDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232203B11BA944C8006473A8 /* BlackfootDictionaryTests.swift */; };
-		232203B41BA944C8006473A8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232203B21BA944C8006473A8 /* Info.plist */; };
 		23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8019B7E11A00D64755 /* AppDelegate.swift */; };
 		23DFAC9619B7E11A00D64755 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8319B7E11A00D64755 /* MainViewController.swift */; };
 		23DFAC9719B7E11A00D64755 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */; };
@@ -33,10 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		231F55DD19B7E82B00750E1C /* BlackfootDictionary Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlackfootDictionary Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2305E32D1BBCAB1A0023E095 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		231F55DD19B7E82B00750E1C /* BlackfootDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		232203B11BA944C8006473A8 /* BlackfootDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackfootDictionaryTests.swift; path = BlackfootDictionaryTests/BlackfootDictionaryTests.swift; sourceTree = SOURCE_ROOT; };
 		232203B21BA944C8006473A8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BlackfootDictionaryTests/Info.plist; sourceTree = SOURCE_ROOT; };
-		232203C11BA9465E006473A8 /* BlackfootDictionary Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlackfootDictionary Tests copy-Info.plist"; path = "/Users/nicolaslangley/Development/Xcode Projects/Blackfoot-Dictionary-iOS/BlackfootDictionary Tests copy-Info.plist"; sourceTree = "<absolute>"; };
 		23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlackfootTranslationEngine.a; path = "BlackfootTranslationEngine/build/Debug-iphoneos/libBlackfootTranslationEngine.a"; sourceTree = "<group>"; };
 		23DFAC8019B7E11A00D64755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DFAC8119B7E11A00D64755 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -133,6 +133,7 @@
 				23DFAC8C19B7E11A00D64755 /* blkft-dictionary.db */,
 				23DFAC8D19B7E11A00D64755 /* Images.xcassets */,
 				23DFAC8E19B7E11A00D64755 /* Info.plist */,
+				2305E32D1BBCAB1A0023E095 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -154,7 +155,6 @@
 				23F3092B19A6BA6000862680 /* Products */,
 				54DAE921F2E0498C815D54B6 /* Frameworks */,
 				DD0A12BF8DA06757D603F7DB /* Pods */,
-				232203C11BA9465E006473A8 /* BlackfootDictionary Tests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				23F3092A19A6BA6000862680 /* Blackfoot Dictionary.app */,
-				231F55DD19B7E82B00750E1C /* BlackfootDictionary Tests.xctest */,
+				231F55DD19B7E82B00750E1C /* BlackfootDictionaryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			);
 			name = BlackfootDictionaryTests;
 			productName = "BlackfootDictionary Tests";
-			productReference = 231F55DD19B7E82B00750E1C /* BlackfootDictionary Tests.xctest */;
+			productReference = 231F55DD19B7E82B00750E1C /* BlackfootDictionaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		23F3092919A6BA6000862680 /* BlackfootDictionary */ = {
@@ -232,7 +232,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BFD;
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Hierarchy;
 				TargetAttributes = {
 					231F55DC19B7E82B00750E1C = {
@@ -241,6 +242,7 @@
 					};
 					23F3092919A6BA6000862680 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = BZR6QG74H5;
 					};
 				};
 			};
@@ -268,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232203B41BA944C8006473A8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23DFAC9D19B7E11A00D64755 /* Images.xcassets in Resources */,
+				2305E32E1BBCAB1A0023E095 /* LaunchScreen.storyboard in Resources */,
 				23DFAC9B19B7E11A00D64755 /* Main.storyboard in Resources */,
 				23DFAC9C19B7E11A00D64755 /* blkft-dictionary.db in Resources */,
 			);
@@ -375,6 +377,7 @@
 				);
 				INFOPLIST_FILE = BlackfootDictionaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hierarchy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
 			};
@@ -389,6 +392,7 @@
 				);
 				INFOPLIST_FILE = BlackfootDictionaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hierarchy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blackfoot Dictionary.app/Blackfoot Dictionary";
 			};
@@ -414,6 +418,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -479,10 +484,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/BlackfootDictionary/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hierarchy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Blackfoot Dictionary";
+				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BlackfootDictionary/Application/BlackfootDictionary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -499,10 +507,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/BlackfootDictionary/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks $(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hierarchy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Blackfoot Dictionary";
+				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BlackfootDictionary/Application/BlackfootDictionary-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
