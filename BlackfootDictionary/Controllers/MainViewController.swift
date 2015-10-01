@@ -16,6 +16,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Add tap recognizer
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "Blackfoot Dictionary"
     }
@@ -32,8 +36,13 @@ class MainViewController: UIViewController {
             vc.setInputText(inputTextField.text!)
         } else if (segue.identifier == "RandomWordSegue") {
             // Nothing to perform for moving to Random Word view
-            var vc: RandomWordViewController = segue.destinationViewController as! RandomWordViewController
+            _ = segue.destinationViewController as! RandomWordViewController
         }
+    }
+    
+    func dismissKeyboard() {
+        // Resign first responder status
+        view.endEditing(true)
     }
 
     // Handle pressing of translate button
@@ -48,7 +57,5 @@ class MainViewController: UIViewController {
     @IBAction func randomWordButtonPressed(sender : AnyObject) {
         self.performSegueWithIdentifier("RandomWordSegue", sender: sender)
     }
-    
-
 }
 
