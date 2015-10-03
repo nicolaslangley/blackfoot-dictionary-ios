@@ -117,13 +117,48 @@
     return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
 }
 
+// Function for find and replacing on a string
+void replaceAll(std::string& str, const std::string& from, const std::string& to) {
+    if(from.empty())
+        return;
+    size_t start_pos = 0;
+    while((start_pos = str.find(from, start_pos)) != std::string::npos) {
+        str.replace(start_pos, from.length(), to);
+        start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
+    }
+}
+
 // This function will take a blackfoot word and convert it to IPA
-// TODO: Finish implementing this function
 + (NSString *) convertToIPA:(NSString *) word {
     // Convert from Objective-C to C++
     const char *input_word = [word UTF8String];
     std::string ipa_string = std::string(input_word);
-    ipa_string.replace(ipa_string.begin(), ipa_string.end(), "ai", "ə");
+    // Diphthong replacements
+    replaceAll(ipa_string, "ai", "ə");
+    replaceAll(ipa_string, "ao", "ɑʷ");
+    replaceAll(ipa_string, "oi", "ɔɪ");
+    
+    // Long vowel replacements
+    replaceAll(ipa_string, "aa", "ɑː");
+    replaceAll(ipa_string, "ii", "ɪː");
+    replaceAll(ipa_string, "oo", "ɘʊ");
+    
+    // Vowel replacements
+    replaceAll(ipa_string, "a", "ɑ");
+    replaceAll(ipa_string, "i", "ɪ");
+    replaceAll(ipa_string, "o", "ɘʊ");
+    
+    // Long consonant replacements
+    replaceAll(ipa_string, "nn", "nː");
+    replaceAll(ipa_string, "mm", "mː");
+    replaceAll(ipa_string, "ss", "sː");
+    
+    // Consonant replacements - NOTE: n, m, and s are unchanged
+    replaceAll(ipa_string, "'", "?");
+    replaceAll(ipa_string, "p", "b");
+    replaceAll(ipa_string, "t", "d");
+    replaceAll(ipa_string, "k", "g");
+    
     return [NSString stringWithUTF8String:ipa_string.c_str()];
 }
 

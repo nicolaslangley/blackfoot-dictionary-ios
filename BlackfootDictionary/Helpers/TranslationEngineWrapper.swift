@@ -27,7 +27,7 @@ class TranslationEngineWrapper {
         return resultString!
     }
     
-    // Wrapper function for converting to IPA
+    // Wrapper for IPA conversion function in BFDTranslationEngine
     class func convertToIPA(inputWord: String) -> String {
         let resultString = BFDTranslationEngine.convertToIPA(inputWord)
         return resultString
