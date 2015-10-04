@@ -41,7 +41,7 @@
                                     <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38b-hv-3QC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uux-dX-XcJ" userLabel="Input Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uux-dX-XcJ" userLabel="Input Text Field">
                                 <rect key="frame" x="196" y="184" width="209" height="30"/>
                                 <animations/>
                                 <constraints>
