@@ -20,8 +20,7 @@ class RandomWordViewController: UIViewController {
         
         self.navigationItem.title = "Random Word"
         
-        // Display the translated text (in this case just a default placeholder)
-        //outputTextLabel.textAlignment = NSTextAlignment.Center
+        // Display the translated text
         outputTextLabel.numberOfLines = 0
         outputTextLabel.adjustsFontSizeToFitWidth = true
         outputTextLabel.textAlignment = NSTextAlignment.Center
@@ -39,6 +38,7 @@ class RandomWordViewController: UIViewController {
         inputText = input
     }
     
+    // Retrieve a random word and display it
     func randomWord() {
         let outputData = TranslationEngineWrapper.queryRandomWord()
         outputTextLabel.text = outputData

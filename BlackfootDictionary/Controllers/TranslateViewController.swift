@@ -24,6 +24,7 @@ class TranslateViewController: UIViewController {
         //outputTextLabel.textAlignment = NSTextAlignment.Center
         outputTextLabel.numberOfLines = 0
         outputTextLabel.adjustsFontSizeToFitWidth = true
+        outputTextLabel.textAlignment = NSTextAlignment.Center
         translateWord(inputText)
         
     }

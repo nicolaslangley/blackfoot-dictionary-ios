@@ -13,12 +13,21 @@ class MainViewController: UIViewController {
     
     // Input outlets from Interface Builder
     @IBOutlet weak var inputTextField: UITextField!
+    // Menu bar button
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add tap recognizer
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        // Set up the reveal view controller
+        if (self.revealViewController() != nil) {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "Blackfoot Dictionary"

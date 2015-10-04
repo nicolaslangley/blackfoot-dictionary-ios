@@ -10,5 +10,6 @@
 #define BlackfootDictionary_Bridging_Header_h
 
 #import "BFDTranslationEngine.h"
+#import "SWRevealViewController.h"
 
 #endif
