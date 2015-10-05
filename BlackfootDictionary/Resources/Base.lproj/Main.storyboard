@@ -7,7 +7,7 @@
         <!--Translate-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="TranslateViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -94,10 +94,69 @@
             </objects>
             <point key="canvasLocation" x="-165" y="-427"/>
         </scene>
-        <!--Translate View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="huN-r7-8k9">
+            <objects>
+                <navigationController id="gQp-gf-8BP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mTC-9o-pyh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HaO-nu-38Y" kind="relationship" relationship="rootViewController" id="EsS-YS-V1F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuP-04-wG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-979" y="471"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="GX0-zY-ccd">
+            <objects>
+                <viewController id="HaO-nu-38Y" customClass="AboutViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p2o-xz-A5v"/>
+                        <viewControllerLayoutGuide type="bottom" id="DYy-qI-8pv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdQ-3e-iXt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Nicolas Langley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6q-NT-uc6">
+                                <rect key="frame" x="183" y="106" width="235" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="6Ay-SU-92s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DYy-qI-8pv" firstAttribute="top" secondItem="k6q-NT-uc6" secondAttribute="bottom" constant="473" id="Wue-e0-uTI"/>
+                            <constraint firstItem="k6q-NT-uc6" firstAttribute="top" secondItem="p2o-xz-A5v" secondAttribute="bottom" constant="42" id="bhT-ye-y8p"/>
+                            <constraint firstItem="k6q-NT-uc6" firstAttribute="centerX" secondItem="tdQ-3e-iXt" secondAttribute="centerX" id="sUK-oM-baM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="dd0-t3-slz">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="3zM-2D-fVv" userLabel="Menu Button"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="3zM-2D-fVv" id="Zbs-3b-GZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qf2-nO-B88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-173" y="471"/>
+        </scene>
+        <!--Translated Output View Controller-->
         <scene sceneID="bcg-3q-QaR">
             <objects>
-                <viewController id="9f9-82-H4y" customClass="TranslateViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9f9-82-H4y" customClass="TranslatedOutputViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pdc-zJ-NCd"/>
                         <viewControllerLayoutGuide type="bottom" id="CqL-yj-4JQ"/>
@@ -269,6 +328,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="gQp-gf-8BP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="CQb-tv-rup"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -282,20 +344,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nj-LD-NtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2011" y="471"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Gxp-R8-uj3">
-            <objects>
-                <viewController id="PuO-c6-WOE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k2Z-Gl-97F">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ews-8d-eJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

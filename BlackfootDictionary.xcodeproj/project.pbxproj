@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2305E32E1BBCAB1A0023E095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2305E32D1BBCAB1A0023E095 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		231D3C1C1BC2F56800D91AD7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		232203B31BA944C8006473A8 /* BlackfootDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232203B11BA944C8006473A8 /* BlackfootDictionaryTests.swift */; };
 		23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8019B7E11A00D64755 /* AppDelegate.swift */; };
-		23DFAC9619B7E11A00D64755 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8319B7E11A00D64755 /* MainViewController.swift */; };
+		23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */; };
 		23DFAC9719B7E11A00D64755 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */; };
-		23DFAC9819B7E11A00D64755 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8519B7E11A00D64755 /* TranslateViewController.swift */; };
+		23DFAC9819B7E11A00D64755 /* TranslatedOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8519B7E11A00D64755 /* TranslatedOutputViewController.swift */; };
 		23DFAC9919B7E11A00D64755 /* DatabaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8719B7E11A00D64755 /* DatabaseUtility.swift */; };
 		23DFAC9A19B7E11A00D64755 /* TranslationEngineWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8819B7E11A00D64755 /* TranslationEngineWrapper.swift */; };
 		23DFAC9B19B7E11A00D64755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DFAC8A19B7E11A00D64755 /* Main.storyboard */; };
@@ -34,15 +35,16 @@
 
 /* Begin PBXFileReference section */
 		2305E32D1BBCAB1A0023E095 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		231F55DD19B7E82B00750E1C /* BlackfootDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackfootDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		232203B11BA944C8006473A8 /* BlackfootDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackfootDictionaryTests.swift; path = BlackfootDictionaryTests/BlackfootDictionaryTests.swift; sourceTree = SOURCE_ROOT; };
 		232203B21BA944C8006473A8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BlackfootDictionaryTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlackfootTranslationEngine.a; path = "BlackfootTranslationEngine/build/Debug-iphoneos/libBlackfootTranslationEngine.a"; sourceTree = "<group>"; };
 		23DFAC8019B7E11A00D64755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DFAC8119B7E11A00D64755 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
-		23DFAC8319B7E11A00D64755 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
-		23DFAC8519B7E11A00D64755 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		23DFAC8519B7E11A00D64755 /* TranslatedOutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslatedOutputViewController.swift; sourceTree = "<group>"; };
 		23DFAC8719B7E11A00D64755 /* DatabaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtility.swift; sourceTree = "<group>"; };
 		23DFAC8819B7E11A00D64755 /* TranslationEngineWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationEngineWrapper.swift; sourceTree = "<group>"; };
 		23DFAC8B19B7E11A00D64755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,9 +112,10 @@
 		23DFAC8219B7E11A00D64755 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				23DFAC8319B7E11A00D64755 /* MainViewController.swift */,
+				23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */,
 				23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */,
-				23DFAC8519B7E11A00D64755 /* TranslateViewController.swift */,
+				23DFAC8519B7E11A00D64755 /* TranslatedOutputViewController.swift */,
+				231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,10 +337,11 @@
 			files = (
 				23DFAC9919B7E11A00D64755 /* DatabaseUtility.swift in Sources */,
 				23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */,
-				23DFAC9819B7E11A00D64755 /* TranslateViewController.swift in Sources */,
+				23DFAC9819B7E11A00D64755 /* TranslatedOutputViewController.swift in Sources */,
 				23DFAC9719B7E11A00D64755 /* RandomWordViewController.swift in Sources */,
 				23DFAC9F19B7E11A00D64755 /* BFDTranslationEngine.mm in Sources */,
-				23DFAC9619B7E11A00D64755 /* MainViewController.swift in Sources */,
+				23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */,
+				231D3C1C1BC2F56800D91AD7 /* AboutViewController.swift in Sources */,
 				23DFAC9A19B7E11A00D64755 /* TranslationEngineWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

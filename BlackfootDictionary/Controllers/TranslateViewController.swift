@@ -1,5 +1,5 @@
 //
-//  TranslateViewController.swift
+//  ViewController.swift
 //  Blackfoot Dictionary
 //
 //  Created by Nicolas Langley on 8/21/14.
@@ -11,38 +11,60 @@ import Foundation
 
 class TranslateViewController: UIViewController {
     
-    @IBOutlet weak var outputTextLabel: UILabel!
-    var inputText: String!
+    // Input outlets from Interface Builder
+    @IBOutlet weak var inputTextField: UITextField!
+    // Reveal view menu button
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Add tap recognizer
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        // Set up the reveal view controller
+        if (self.revealViewController() != nil) {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.navigationItem.title = "Translate"
-        
-        // Display the translated text (in this case just a default placeholder)
-        //outputTextLabel.textAlignment = NSTextAlignment.Center
-        outputTextLabel.numberOfLines = 0
-        outputTextLabel.adjustsFontSizeToFitWidth = true
-        outputTextLabel.textAlignment = NSTextAlignment.Center
-        translateWord(inputText)
-        
+        self.navigationItem.title = "Blackfoot Dictionary"
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // Receive the input text value and store it
-    func setInputText(input : String, _nonojbc: () = ()) {
-        inputText = input
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // Action to perform for moving to translate view
+        if (segue.identifier == "TranslateSegue") {
+            let vc: TranslatedOutputViewController = segue.destinationViewController as! TranslatedOutputViewController
+            vc.setInputText(inputTextField.text!)
+        } else if (segue.identifier == "RandomWordSegue") {
+            // Nothing to perform for moving to Random Word view
+            _ = segue.destinationViewController as! RandomWordViewController
+        }
     }
     
-    func translateWord(word: String) {
-        let outputData = TranslationEngineWrapper.queryMatches(word)
-        outputTextLabel.text = outputData
+    func dismissKeyboard() {
+        // Resign first responder status
+        view.endEditing(true)
+    }
+
+    // Handle pressing of translate button
+    @IBAction func translateButtonPressed(sender : AnyObject) {
+        if (inputTextField.text == "") {
+            return
+        } else {
+            self.performSegueWithIdentifier("TranslateSegue", sender: sender)
+        }
     }
     
+    @IBAction func randomWordButtonPressed(sender : AnyObject) {
+        self.performSegueWithIdentifier("RandomWordSegue", sender: sender)
+    }
 }
 
