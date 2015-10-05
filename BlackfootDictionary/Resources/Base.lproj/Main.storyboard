@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z1o-Vo-jj4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Translate-->
@@ -153,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="-173" y="471"/>
         </scene>
-        <!--Translated Output View Controller-->
+        <!--Results-->
         <scene sceneID="bcg-3q-QaR">
             <objects>
-                <viewController id="9f9-82-H4y" customClass="TranslatedOutputViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9f9-82-H4y" customClass="ResultsViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pdc-zJ-NCd"/>
                         <viewControllerLayoutGuide type="bottom" id="CqL-yj-4JQ"/>
@@ -165,27 +166,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOz-ur-8Gr" userLabel="Ouput Label">
-                                <rect key="frame" x="26" y="86" width="269" height="451"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJb-PK-Qhm">
+                                <rect key="frame" x="20" y="74" width="560" height="506"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="508" id="Bf5-7i-vJs"/>
+                                    <constraint firstAttribute="width" constant="560" id="X1G-5q-Jo0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bf5-7i-vJs"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CqL-yj-4JQ" firstAttribute="top" secondItem="RJb-PK-Qhm" secondAttribute="bottom" constant="20" id="3Od-xF-Rqu"/>
+                            <constraint firstItem="CqL-yj-4JQ" firstAttribute="top" secondItem="RJb-PK-Qhm" secondAttribute="bottom" constant="20" id="6k0-W1-yor"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="leading" secondItem="pM3-si-LUk" secondAttribute="leadingMargin" id="9we-aC-GVN"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="trailing" secondItem="pM3-si-LUk" secondAttribute="trailingMargin" id="Evc-ub-G65"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="leading" secondItem="pM3-si-LUk" secondAttribute="leadingMargin" id="SFj-ma-pcP"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="top" secondItem="pdc-zJ-NCd" secondAttribute="bottom" constant="10" id="gMu-T3-SdY"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="trailing" secondItem="pM3-si-LUk" secondAttribute="trailingMargin" id="gSH-1n-Nbb"/>
+                            <constraint firstItem="RJb-PK-Qhm" firstAttribute="top" secondItem="pdc-zJ-NCd" secondAttribute="bottom" constant="8" id="ml5-PB-kdq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ml5-PB-kdq"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Wyj-OR-YOV"/>
+                    <navigationItem key="navigationItem" title="Results" id="Wyj-OR-YOV"/>
                     <connections>
-                        <outlet property="outputTextLabel" destination="vOz-ur-8Gr" id="AHm-5d-0d8"/>
+                        <outlet property="outputTextView" destination="RJb-PK-Qhm" id="eOj-5s-jSS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0p-Xe-n4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731.25" y="-733.09859154929575"/>
+            <point key="canvasLocation" x="731" y="-734"/>
         </scene>
-        <!--Random Word View Controller-->
+        <!--Random Word-->
         <scene sceneID="yAb-5E-ICf">
             <objects>
                 <viewController id="9PM-Vd-U3D" customClass="RandomWordViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,25 +221,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-s5-zjq" userLabel="Ouput Label">
-                                <rect key="frame" x="26" y="97" width="269" height="451"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H1f-9Z-iYk">
+                                <rect key="frame" x="20" y="74" width="560" height="506"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="560" id="5AQ-da-qUP"/>
+                                    <constraint firstAttribute="height" constant="508" id="HrE-3C-AUJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="506" id="VOb-K1-goJ"/>
+                                    <constraint firstAttribute="width" constant="560" id="dda-fZ-uY3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HrE-3C-AUJ"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H1f-9Z-iYk" firstAttribute="top" secondItem="91p-Bj-KqB" secondAttribute="bottom" constant="10" id="6PG-CU-2Gq"/>
+                            <constraint firstItem="qlf-wT-V9Y" firstAttribute="top" secondItem="H1f-9Z-iYk" secondAttribute="bottom" constant="20" id="Psb-yd-Ubo"/>
+                            <constraint firstItem="H1f-9Z-iYk" firstAttribute="leading" secondItem="N7J-QW-7CA" secondAttribute="leadingMargin" id="nmY-6M-LTN"/>
+                            <constraint firstItem="H1f-9Z-iYk" firstAttribute="trailing" secondItem="N7J-QW-7CA" secondAttribute="trailingMargin" id="ugC-9p-FTg"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gLP-sR-yZk"/>
+                    <navigationItem key="navigationItem" title="Random Word" id="gLP-sR-yZk"/>
                     <connections>
-                        <outlet property="outputTextLabel" destination="M5V-s5-zjq" id="ibH-Gu-lt6"/>
+                        <outlet property="outputTextView" destination="H1f-9Z-iYk" id="nAE-tu-u8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPQ-vI-i3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731.25" y="-67.605633802816897"/>
+            <point key="canvasLocation" x="731" y="-68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3l0-MA-FxV">

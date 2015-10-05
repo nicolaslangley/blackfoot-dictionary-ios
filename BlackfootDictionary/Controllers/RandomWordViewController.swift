@@ -11,19 +11,19 @@ import Foundation
 
 class RandomWordViewController: UIViewController {
     
-    @IBOutlet weak var outputTextLabel: UILabel!
+    @IBOutlet weak var outputTextView: UITextView!
     var inputText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.title = "Random Word"
         
         // Display the translated text
-        outputTextLabel.numberOfLines = 0
-        outputTextLabel.adjustsFontSizeToFitWidth = true
-        outputTextLabel.textAlignment = NSTextAlignment.Center
+        outputTextView.scrollRangeToVisible(NSMakeRange(0, 1))
+        outputTextView.scrollEnabled = true
+        outputTextView.font = UIFont.systemFontOfSize(15)
+        outputTextView.textAlignment = NSTextAlignment.Left
         randomWord()
         
     }
@@ -41,7 +41,7 @@ class RandomWordViewController: UIViewController {
     // Retrieve a random word and display it
     func randomWord() {
         let outputData = TranslationEngineWrapper.queryRandomWord()
-        outputTextLabel.text = outputData
+        outputTextView.text = outputData 
     }
     
 }

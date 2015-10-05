@@ -29,8 +29,8 @@ class TranslateViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.title = "Blackfoot Dictionary"
+        // Set the navigation bar title
+        self.navigationItem.title = "Translate"
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +41,7 @@ class TranslateViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Action to perform for moving to translate view
         if (segue.identifier == "TranslateSegue") {
-            let vc: TranslatedOutputViewController = segue.destinationViewController as! TranslatedOutputViewController
+            let vc: ResultsViewController = segue.destinationViewController as! ResultsViewController
             vc.setInputText(inputTextField.text!)
         } else if (segue.identifier == "RandomWordSegue") {
             // Nothing to perform for moving to Random Word view
