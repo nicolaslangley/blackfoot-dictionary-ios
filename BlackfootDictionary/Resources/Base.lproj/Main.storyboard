@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z1o-Vo-jj4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -239,7 +238,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-zJ-eGk">
-                                        <rect key="frame" x="0.0" y="33" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="33" width="560" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="21" text="IPA Pronounciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRU-7z-fAm">
                                                 <rect key="frame" x="8" y="0.0" width="160" height="21"/>
@@ -250,31 +249,34 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLB-Rr-NKp">
-                                                <rect key="frame" x="176" y="-1" width="376" height="21"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="IPA goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVQ-NL-ZfS">
+                                                <rect key="frame" x="8" y="20" width="544" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="LRU-7z-fAm" firstAttribute="leading" secondItem="Kh7-zJ-eGk" secondAttribute="leadingMargin" id="1Fr-jZ-HH6"/>
-                                            <constraint firstItem="LRU-7z-fAm" firstAttribute="firstBaseline" secondItem="VLB-Rr-NKp" secondAttribute="firstBaseline" constant="1" id="Raq-oX-HqU"/>
+                                            <constraint firstAttribute="height" constant="60" id="CCO-gb-9QS"/>
+                                            <constraint firstItem="oVQ-NL-ZfS" firstAttribute="trailing" secondItem="Kh7-zJ-eGk" secondAttribute="trailingMargin" id="E8S-mo-cLE"/>
+                                            <constraint firstItem="oVQ-NL-ZfS" firstAttribute="bottom" secondItem="Kh7-zJ-eGk" secondAttribute="bottomMargin" id="F1t-JM-uzB"/>
                                             <constraint firstItem="LRU-7z-fAm" firstAttribute="top" secondItem="Kh7-zJ-eGk" secondAttribute="top" id="bTh-R2-Ukr"/>
-                                            <constraint firstItem="LRU-7z-fAm" firstAttribute="baseline" secondItem="VLB-Rr-NKp" secondAttribute="baseline" constant="1" id="dlp-G5-5kS"/>
-                                            <constraint firstItem="VLB-Rr-NKp" firstAttribute="leading" secondItem="LRU-7z-fAm" secondAttribute="trailing" constant="8" symbolic="YES" id="i64-Se-68J"/>
-                                            <constraint firstAttribute="trailing" secondItem="VLB-Rr-NKp" secondAttribute="trailing" constant="8" id="jCI-OS-bvU"/>
+                                            <constraint firstItem="oVQ-NL-ZfS" firstAttribute="top" secondItem="Kh7-zJ-eGk" secondAttribute="top" constant="20" id="g6m-fU-a85"/>
+                                            <constraint firstItem="oVQ-NL-ZfS" firstAttribute="leading" secondItem="Kh7-zJ-eGk" secondAttribute="leading" constant="8" id="p3w-3v-SM8"/>
                                             <constraint firstItem="LRU-7z-fAm" firstAttribute="leading" secondItem="Kh7-zJ-eGk" secondAttribute="leading" constant="8" id="qwt-1T-LQU"/>
-                                            <constraint firstAttribute="height" constant="30" id="uWN-vu-QJT"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAy-KR-YIi">
-                                        <rect key="frame" x="0.0" y="66" width="560" height="245"/>
+                                        <rect key="frame" x="0.0" y="96" width="560" height="215"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Gloss goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-gA-d94">
-                                                <rect key="frame" x="8" y="29" width="544" height="141"/>
+                                                <rect key="frame" x="8" y="20" width="544" height="141"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="141" id="yHP-09-Bf2"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -290,10 +292,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="oVd-gA-d94" firstAttribute="bottom" secondItem="PAy-KR-YIi" secondAttribute="bottomMargin" constant="-67" id="AZw-iF-xDH"/>
+                                            <constraint firstItem="oVd-gA-d94" firstAttribute="bottom" secondItem="PAy-KR-YIi" secondAttribute="bottomMargin" constant="-46" id="AZw-iF-xDH"/>
                                             <constraint firstItem="d8F-dV-5sj" firstAttribute="top" secondItem="PAy-KR-YIi" secondAttribute="top" id="HJM-nr-PIE"/>
                                             <constraint firstItem="oVd-gA-d94" firstAttribute="trailing" secondItem="PAy-KR-YIi" secondAttribute="trailingMargin" id="Lfc-97-Hhr"/>
-                                            <constraint firstItem="oVd-gA-d94" firstAttribute="top" secondItem="PAy-KR-YIi" secondAttribute="top" constant="29" id="inl-GY-ubw"/>
+                                            <constraint firstItem="oVd-gA-d94" firstAttribute="top" secondItem="PAy-KR-YIi" secondAttribute="top" constant="20" id="inl-GY-ubw"/>
                                             <constraint firstItem="d8F-dV-5sj" firstAttribute="leading" secondItem="PAy-KR-YIi" secondAttribute="leadingMargin" id="jFE-a8-3jx"/>
                                             <constraint firstItem="d8F-dV-5sj" firstAttribute="leading" secondItem="PAy-KR-YIi" secondAttribute="leading" constant="8" id="lfy-iz-PJA"/>
                                             <constraint firstItem="oVd-gA-d94" firstAttribute="leading" secondItem="PAy-KR-YIi" secondAttribute="leading" constant="8" id="pR2-Xo-uQL"/>
@@ -320,7 +322,7 @@
                     <connections>
                         <outlet property="blackfootWordLabel" destination="9Na-xX-jbJ" id="MXK-th-BS8"/>
                         <outlet property="englishGlossTextView" destination="oVd-gA-d94" id="2ln-Ej-4EM"/>
-                        <outlet property="ipaStringLabel" destination="VLB-Rr-NKp" id="vc5-LI-LcC"/>
+                        <outlet property="ipaStringTextView" destination="oVQ-NL-ZfS" id="fwf-Ga-ghL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbZ-gk-FSg" userLabel="First Responder" sceneMemberID="firstResponder"/>

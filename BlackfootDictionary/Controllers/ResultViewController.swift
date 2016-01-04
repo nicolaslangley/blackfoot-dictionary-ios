@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var blackfootWordLabel: UILabel!
     @IBOutlet weak var englishGlossTextView: UITextView!
-    @IBOutlet weak var ipaStringLabel: UILabel!
+    @IBOutlet weak var ipaStringTextView: UITextView!
     
     var blackfootWord: String = ""
     var englishGloss: String = ""
@@ -22,7 +22,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         ipaString = TranslationEngineWrapper.convertToIPA(blackfootWord)
         englishGlossTextView.text = englishGloss
-        ipaStringLabel.text = ipaString
+        ipaStringTextView.text = ipaString
         blackfootWordLabel.text = blackfootWord
         // Do any additional setup after loading the view, typically from a nib.
     }
