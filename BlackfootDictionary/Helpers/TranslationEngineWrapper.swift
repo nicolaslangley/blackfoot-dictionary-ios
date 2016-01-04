@@ -12,19 +12,19 @@ import Foundation
 class TranslationEngineWrapper {
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryMatches(inputWord: String) -> String {
+    class func queryMatches(inputWord: String) -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultArray = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0)
-        return resultArray.componentsJoinedByString("");
+        let resultArray = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
+        return resultArray
     }
     
     // Wrapper for random word function in BFDTranslationEngine
-    class func queryRandomWord() -> String {
+    class func queryRandomWord() -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultArray = BFDTranslationEngine.queryRandomWord(dbPath)
-        return resultArray.componentsJoinedByString("");
+        let resultArray = BFDTranslationEngine.queryRandomWord(dbPath) as NSArray as! [String]
+        return resultArray
     }
     
     // Wrapper for IPA conversion function in BFDTranslationEngine

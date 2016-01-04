@@ -41,11 +41,12 @@ class TranslateViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Action to perform for moving to translate view
         if (segue.identifier == "TranslateSegue") {
-            let vc: ResultsViewController = segue.destinationViewController as! ResultsViewController
+            let vc: ResultsTableViewController = segue.destinationViewController as! ResultsTableViewController
             vc.setInputText(inputTextField.text!)
+            vc.setRandomWord(false)
         } else if (segue.identifier == "RandomWordSegue") {
-            // Nothing to perform for moving to Random Word view
-            _ = segue.destinationViewController as! RandomWordViewController
+            let vc: ResultsTableViewController = segue.destinationViewController as! ResultsTableViewController
+            vc.setRandomWord(true)
         }
     }
     

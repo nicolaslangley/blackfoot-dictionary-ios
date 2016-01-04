@@ -11,10 +11,11 @@
 		231D3C1C1BC2F56800D91AD7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */; };
 		232203B31BA944C8006473A8 /* BlackfootDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232203B11BA944C8006473A8 /* BlackfootDictionaryTests.swift */; };
 		23618E0A1C3A327700451658 /* BFDTranslationEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23618E081C3A327700451658 /* BFDTranslationEngine.cpp */; };
+		23618E0C1C3AE92D00451658 /* TranslationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E0B1C3AE92D00451658 /* TranslationResult.swift */; };
+		23618E0F1C3AED6900451658 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E0E1C3AED6900451658 /* ResultTableViewCell.swift */; };
+		23618E111C3AEE1700451658 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E101C3AEE1700451658 /* ResultsTableViewController.swift */; };
 		23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8019B7E11A00D64755 /* AppDelegate.swift */; };
 		23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */; };
-		23DFAC9719B7E11A00D64755 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */; };
-		23DFAC9819B7E11A00D64755 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8519B7E11A00D64755 /* ResultsViewController.swift */; };
 		23DFAC9919B7E11A00D64755 /* DatabaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8719B7E11A00D64755 /* DatabaseUtility.swift */; };
 		23DFAC9A19B7E11A00D64755 /* TranslationEngineWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8819B7E11A00D64755 /* TranslationEngineWrapper.swift */; };
 		23DFAC9B19B7E11A00D64755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DFAC8A19B7E11A00D64755 /* Main.storyboard */; };
@@ -42,12 +43,13 @@
 		232203B21BA944C8006473A8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BlackfootDictionaryTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		23618E081C3A327700451658 /* BFDTranslationEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BFDTranslationEngine.cpp; sourceTree = "<group>"; };
 		23618E091C3A327700451658 /* BFDTranslationEngine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BFDTranslationEngine.hpp; sourceTree = "<group>"; };
+		23618E0B1C3AE92D00451658 /* TranslationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TranslationResult.swift; path = Models/TranslationResult.swift; sourceTree = "<group>"; };
+		23618E0E1C3AED6900451658 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = Models/ResultTableViewCell.swift; sourceTree = "<group>"; };
+		23618E101C3AEE1700451658 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlackfootTranslationEngine.a; path = "BlackfootTranslationEngine/build/Debug-iphoneos/libBlackfootTranslationEngine.a"; sourceTree = "<group>"; };
 		23DFAC8019B7E11A00D64755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DFAC8119B7E11A00D64755 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
 		23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
-		23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
-		23DFAC8519B7E11A00D64755 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		23DFAC8719B7E11A00D64755 /* DatabaseUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtility.swift; sourceTree = "<group>"; };
 		23DFAC8819B7E11A00D64755 /* TranslationEngineWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationEngineWrapper.swift; sourceTree = "<group>"; };
 		23DFAC8B19B7E11A00D64755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,11 +93,21 @@
 			path = "BlackfootDictionary Tests";
 			sourceTree = "<group>";
 		};
+		23618E0D1C3AE93500451658 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23618E0B1C3AE92D00451658 /* TranslationResult.swift */,
+				23618E0E1C3AED6900451658 /* ResultTableViewCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		23DFAC7E19B7E11A00D64755 /* BlackfootDictionary */ = {
 			isa = PBXGroup;
 			children = (
 				23DFAC7F19B7E11A00D64755 /* Application */,
 				23DFAC8219B7E11A00D64755 /* Controllers */,
+				23618E0D1C3AE93500451658 /* Models */,
 				23DFAC8619B7E11A00D64755 /* Helpers */,
 				23DFAC8919B7E11A00D64755 /* Resources */,
 				23DFAC8F19B7E11A00D64755 /* TranslationEngine */,
@@ -116,8 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */,
-				23DFAC8419B7E11A00D64755 /* RandomWordViewController.swift */,
-				23DFAC8519B7E11A00D64755 /* ResultsViewController.swift */,
+				23618E101C3AEE1700451658 /* ResultsTableViewController.swift */,
 				231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */,
 			);
 			path = Controllers;
@@ -340,11 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23618E111C3AEE1700451658 /* ResultsTableViewController.swift in Sources */,
+				23618E0F1C3AED6900451658 /* ResultTableViewCell.swift in Sources */,
+				23618E0C1C3AE92D00451658 /* TranslationResult.swift in Sources */,
 				23618E0A1C3A327700451658 /* BFDTranslationEngine.cpp in Sources */,
 				23DFAC9919B7E11A00D64755 /* DatabaseUtility.swift in Sources */,
 				23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */,
-				23DFAC9819B7E11A00D64755 /* ResultsViewController.swift in Sources */,
-				23DFAC9719B7E11A00D64755 /* RandomWordViewController.swift in Sources */,
 				23DFAC9F19B7E11A00D64755 /* BFDTranslationEngineWrapper.mm in Sources */,
 				23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */,
 				231D3C1C1BC2F56800D91AD7 /* AboutViewController.swift in Sources */,

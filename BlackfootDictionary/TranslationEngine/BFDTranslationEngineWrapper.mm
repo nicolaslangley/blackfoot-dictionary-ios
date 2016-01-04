@@ -51,12 +51,19 @@
 }
 
 // This function queries a random blackfoot word
-+ (NSString *) queryRandomWord:(NSString *) dbPath {
++ (NSMutableArray *) queryRandomWord:(NSString *) dbPath {
     // Conversion from Objective-C to C++
     const char *db_path = [dbPath UTF8String];
     // Call into C++
     std::vector<std::string> results = queryRandomWord(std::string(db_path));
-    return [NSString stringWithUTF8String:results[0].c_str()];
+    // Return array of results
+    id nsstrings = [NSMutableArray new];
+    [nsstrings removeAllObjects];
+    for (auto str : results) {
+        id nsstr = [NSString stringWithUTF8String:str.c_str()];
+        [nsstrings addObject:nsstr];
+    }
+    return nsstrings;
 }
 
 // This function will take a blackfoot word and convert it to IPA
