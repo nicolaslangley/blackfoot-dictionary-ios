@@ -6,19 +6,22 @@
 //  Copyright © 2016 Hierarchy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
     var inputText: String!
+    var selectedData: TranslationResult!
     var randomWord: Bool = false
     var translationResults = [TranslationResult]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if (randomWord) {
+            self.navigationItem.title = "Random Word"
             loadRandomWord()
         } else {
+            self.navigationItem.title = "Results"
             loadTranslatedResults()
         }
     }
@@ -46,7 +49,9 @@ class ResultsTableViewController: UITableViewController {
         for result in translations {
             // Split the string into word and translation
             let resultArr = result.componentsSeparatedByString("-")
-            translationResults.append(TranslationResult(blackfootWord: resultArr[0], englishGloss: resultArr[1]))
+            let word = resultArr[0].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let gloss = resultArr[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            translationResults.append(TranslationResult(blackfootWord: word, englishGloss: gloss))
         }
     }
 
@@ -67,5 +72,18 @@ class ResultsTableViewController: UITableViewController {
         cell.englishGlossLabel.text = translationResult.englishGloss
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "RowSelectionSegue" {
+            let vc: ResultViewController = segue.destinationViewController as! ResultViewController
+            vc.englishGloss = selectedData.englishGloss
+            vc.blackfootWord = selectedData.blackfootWord
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedData = translationResults[indexPath.row]
+        performSegueWithIdentifier("RowSelectionSegue", sender: self)
     }
 }

@@ -14,6 +14,7 @@
 		23618E0C1C3AE92D00451658 /* TranslationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E0B1C3AE92D00451658 /* TranslationResult.swift */; };
 		23618E0F1C3AED6900451658 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E0E1C3AED6900451658 /* ResultTableViewCell.swift */; };
 		23618E111C3AEE1700451658 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E101C3AEE1700451658 /* ResultsTableViewController.swift */; };
+		23618E151C3B169500451658 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618E141C3B169500451658 /* ResultViewController.swift */; };
 		23DFAC9519B7E11A00D64755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8019B7E11A00D64755 /* AppDelegate.swift */; };
 		23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */; };
 		23DFAC9919B7E11A00D64755 /* DatabaseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFAC8719B7E11A00D64755 /* DatabaseUtility.swift */; };
@@ -46,6 +47,7 @@
 		23618E0B1C3AE92D00451658 /* TranslationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TranslationResult.swift; path = Models/TranslationResult.swift; sourceTree = "<group>"; };
 		23618E0E1C3AED6900451658 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = Models/ResultTableViewCell.swift; sourceTree = "<group>"; };
 		23618E101C3AEE1700451658 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		23618E141C3B169500451658 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		23DFAC6E19AEF93E00D64755 /* libBlackfootTranslationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlackfootTranslationEngine.a; path = "BlackfootTranslationEngine/build/Debug-iphoneos/libBlackfootTranslationEngine.a"; sourceTree = "<group>"; };
 		23DFAC8019B7E11A00D64755 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DFAC8119B7E11A00D64755 /* BlackfootDictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlackfootDictionary-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				23DFAC8319B7E11A00D64755 /* TranslateViewController.swift */,
 				23618E101C3AEE1700451658 /* ResultsTableViewController.swift */,
+				23618E141C3B169500451658 /* ResultViewController.swift */,
 				231D3C1B1BC2F56800D91AD7 /* AboutViewController.swift */,
 			);
 			path = Controllers;
@@ -361,6 +364,7 @@
 				23DFAC9619B7E11A00D64755 /* TranslateViewController.swift in Sources */,
 				231D3C1C1BC2F56800D91AD7 /* AboutViewController.swift in Sources */,
 				23DFAC9A19B7E11A00D64755 /* TranslationEngineWrapper.swift in Sources */,
+				23618E151C3B169500451658 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

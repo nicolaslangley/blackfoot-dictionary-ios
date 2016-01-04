@@ -60,7 +60,7 @@ vector<string> queryDatabase(string sqlQuery, string databasePath) {
     if (sql_result == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
             result_stream.str("");
-            result_stream << sqlite3_column_text(statement, 1) << " - " << sqlite3_column_text(statement, 2) << "\n\n";
+            result_stream << sqlite3_column_text(statement, 1) << " - " << sqlite3_column_text(statement, 2);
             // Remove any $ characters
             result_string = result_stream.str();
             result_string.erase(std::remove(result_string.begin(), result_string.end(), '$'), result_string.end());
