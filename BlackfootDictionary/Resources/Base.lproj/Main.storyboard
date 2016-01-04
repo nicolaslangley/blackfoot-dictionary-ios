@@ -158,42 +158,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" id="r0O-wR-HgQ" customClass="ResultTableViewCell" customModule="Blackfoot_Dictionary" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" textLabel="VNA-G9-jF7" detailTextLabel="IvX-Zn-Yj8" style="IBUITableViewCellStyleSubtitle" id="r0O-wR-HgQ" customClass="ResultTableViewCell" customModule="Blackfoot_Dictionary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r0O-wR-HgQ" id="veh-0k-qNE">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-2R-khv">
-                                            <rect key="frame" x="21" y="11" width="196" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="196" id="6oS-9l-yam"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNA-G9-jF7">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maA-gR-Rbh">
-                                            <rect key="frame" x="227" y="11" width="324" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IvX-Zn-Yj8">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="uHg-2R-khv" secondAttribute="bottom" constant="3.5" id="5Vs-St-Xc5"/>
-                                        <constraint firstItem="uHg-2R-khv" firstAttribute="leading" secondItem="veh-0k-qNE" secondAttribute="leadingMargin" constant="13" id="8yX-2H-UiO"/>
-                                        <constraint firstItem="maA-gR-Rbh" firstAttribute="top" secondItem="veh-0k-qNE" secondAttribute="topMargin" constant="3" id="I9D-yE-U19"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="maA-gR-Rbh" secondAttribute="trailing" constant="41" id="Ltt-91-SHq"/>
-                                        <constraint firstItem="maA-gR-Rbh" firstAttribute="leading" secondItem="uHg-2R-khv" secondAttribute="trailing" constant="10" id="YZv-AQ-hKH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="maA-gR-Rbh" secondAttribute="bottom" constant="3.5" id="p6m-6h-arW"/>
-                                        <constraint firstItem="uHg-2R-khv" firstAttribute="top" secondItem="veh-0k-qNE" secondAttribute="topMargin" constant="3" id="w5b-kq-vva"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="blackfootWordLabel" destination="uHg-2R-khv" id="bw4-UW-5ep"/>
-                                    <outlet property="englishGlossLabel" destination="maA-gR-Rbh" id="3LQ-3C-z5u"/>
+                                    <outlet property="blackfootWordLabel" destination="VNA-G9-jF7" id="wnp-Vc-uYT"/>
+                                    <outlet property="englishGlossLabel" destination="IvX-Zn-Yj8" id="yQC-lf-aTq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
