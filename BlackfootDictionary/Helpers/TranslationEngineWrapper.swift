@@ -15,16 +15,16 @@ class TranslationEngineWrapper {
     class func queryMatches(inputWord: String) -> String {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultString = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0)
-        return resultString!
+        let resultArray = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0)
+        return resultArray.componentsJoinedByString("");
     }
     
     // Wrapper for random word function in BFDTranslationEngine
     class func queryRandomWord() -> String {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultString = BFDTranslationEngine.queryRandomWord(dbPath)
-        return resultString!
+        let resultArray = BFDTranslationEngine.queryRandomWord(dbPath)
+        return resultArray.componentsJoinedByString("");
     }
     
     // Wrapper for IPA conversion function in BFDTranslationEngine

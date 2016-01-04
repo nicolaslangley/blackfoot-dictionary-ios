@@ -9,7 +9,7 @@
 #ifndef BlackfootDictionary_Bridging_Header_h
 #define BlackfootDictionary_Bridging_Header_h
 
-#import "BFDTranslationEngine.h"
+#import "BFDTranslationEngineWrapper.h"
 #import "SWRevealViewController.h"
 
 #endif

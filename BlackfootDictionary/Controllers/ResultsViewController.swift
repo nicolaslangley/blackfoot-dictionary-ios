@@ -17,7 +17,7 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Display the translated text
+        // Display the translated words
         outputTextView.scrollRangeToVisible(NSMakeRange(0, 1))
         outputTextView.scrollEnabled = true
         outputTextView.font = UIFont.systemFontOfSize(15)

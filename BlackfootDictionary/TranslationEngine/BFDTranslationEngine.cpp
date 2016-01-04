@@ -1,35 +1,31 @@
 //
-//  BFDTranslationEngine.m
+//  BFDTranslationEngine.cpp
 //  BlackfootDictionary
 //
-//  Created by Nicolas Langley on 8/28/14.
-//  Copyright (c) 2014 Hierarchy. All rights reserved.
+//  Created by Nicolas Langley on 1/3/16.
+//  Copyright © 2016 Hierarchy. All rights reserved.
 //
 
-#import "BFDTranslationEngine.h"
-
-// C++ includes
-#include <stdio.h>
+#include "BFDTranslationEngine.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <algorithm>
 #include <sstream>
-#include <string.h>
 #include <sqlite3.h>
 
-
-@implementation BFDTranslationEngine
+using namespace std;
 
 // This function takes a query and the path to the database and returns the result as a string
-+ (NSString *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath  {
+vector<string> queryDatabase(string sqlQuery, string databasePath) {
     // Conversion from Objective-C to C++
-    const char *db_path = [dbPath UTF8String];
-    const char *input_query = [sqlQuery UTF8String];
+    const char *db_path = databasePath.c_str();
+    const char *input_query = sqlQuery.c_str();
     
     sqlite3 *db;
     int sql_result;
     std::string sql_query = std::string(input_query);
     std::string result_string = "";
+    std::vector<std::string> results;
     std::stringstream result_stream;
     
     // Check that the database path exists
@@ -40,8 +36,8 @@
     } else {
         // File does not exist
         result_string.append("Database does not exist!");
-        // Objective-C
-        return [NSString stringWithUTF8String:result_string.c_str()];
+        cerr << result_string << endl;
+        return vector<string>();
     }
     
     // Open (and if necessary create) database
@@ -51,8 +47,8 @@
         result_stream.str("");
         result_stream << "The database could not be opened: %s" << sqlite3_errmsg(db);
         result_string = result_stream.str();
-        // Objective-C
-        return [NSString stringWithUTF8String:result_string.c_str()];
+        cerr << result_string << endl;
+        return vector<string>();
     }
     
     // Execute query
@@ -63,29 +59,29 @@
     result_stream.str("");
     if (sql_result == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
+            result_stream.str("");
             result_stream << sqlite3_column_text(statement, 1) << " - " << sqlite3_column_text(statement, 2) << "\n\n";
+            // Remove any $ characters
+            result_string = result_stream.str();
+            result_string.erase(std::remove(result_string.begin(), result_string.end(), '$'), result_string.end());
+            results.push_back(result_string);
         }
     } else {
         // Query could not be executed
         result_stream.str("");
         result_stream << "The query could not be executed: %s" << sqlite3_errmsg(db);
         result_string = result_stream.str();
-        // Objective-C
-        return [NSString stringWithUTF8String:result_string.c_str()];
+        cerr << result_string << endl;
+        return vector<string>();;
     }
     
-    result_string = result_stream.str();
-    // Remove any $ characters
-    result_string.erase(std::remove(result_string.begin(), result_string.end(), '$'), result_string.end());
-    // Return result string
-    // This is Objective-C
-    return [NSString stringWithUTF8String:result_string.c_str()];
+    return results;
 }
 
 // This function returns the number of matches given by count and that have a phrase including the given word
-+ (NSString *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
+vector<string> queryMatches(string word, string databasePath, int count) {
     // Conversion from Objective-C to C++
-    const char *input_word = [word UTF8String];
+    const char *input_word = word.c_str();
     // If count is 0, then all records are returned
     int record_count = (int)count;
     std::string count_string = "";
@@ -102,19 +98,18 @@
     std::string sql_query = query_stream.str();
     
     // Query the database with the query and return the result
-    return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
+    return queryDatabase(sql_query, databasePath);
 }
 
 // This function queries a random blackfoot word
-+ (NSString *) queryRandomWord:(NSString *) dbPath {
-    
+vector<string> queryRandomWord(string databasePath) {
     // Compose the sql query based on the word and inputted count
     std::stringstream query_stream;
     query_stream << "SELECT * FROM words ORDER BY RANDOM() LIMIT 1";
     std::string sql_query = query_stream.str();
     
     // Query the database with the query and return the result
-    return [BFDTranslationEngine queryDatabase:[NSString stringWithUTF8String:sql_query.c_str()] databasePath:dbPath];
+    return queryDatabase(sql_query, databasePath);
 }
 
 // Function for find and replacing on a string
@@ -129,10 +124,8 @@ void replaceAll(std::string& str, const std::string& from, const std::string& to
 }
 
 // This function will take a blackfoot word and convert it to IPA
-+ (NSString *) convertToIPA:(NSString *) word {
-    // Convert from Objective-C to C++
-    const char *input_word = [word UTF8String];
-    std::string ipa_string = std::string(input_word);
+string convertToIPA(string word) {
+    std::string ipa_string = word;
     // Diphthong replacements
     replaceAll(ipa_string, "ai", "ə");
     replaceAll(ipa_string, "ao", "ɑʷ");
@@ -159,9 +152,5 @@ void replaceAll(std::string& str, const std::string& from, const std::string& to
     replaceAll(ipa_string, "t", "d");
     replaceAll(ipa_string, "k", "g");
     
-    return [NSString stringWithUTF8String:ipa_string.c_str()];
+    return ipa_string;
 }
-
-
-@end
-

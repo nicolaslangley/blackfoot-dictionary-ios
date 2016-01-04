@@ -13,9 +13,9 @@
 
 @interface BFDTranslationEngine : NSObject
 
-+ (NSString *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count;
-+ (NSString *) queryRandomWord:(NSString *) dbPath;
-+ (NSString *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath;
++ (NSMutableArray *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count;
++ (NSMutableArray *) queryRandomWord:(NSString *) dbPath;
++ (NSMutableArray *) queryDatabase:(NSString *) sqlQuery databasePath:(NSString *) dbPath;
 + (NSString *) convertToIPA:(NSString *) word;
 
 @end
