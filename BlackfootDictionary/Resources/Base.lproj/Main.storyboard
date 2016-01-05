@@ -257,16 +257,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="kwn-ed-96F">
-                                <rect key="frame" x="20" y="89" width="560" height="311"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kwn-ed-96F">
+                                <rect key="frame" x="0.0" y="72" width="600" height="335"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5j-Qg-Gxb">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <rect key="frame" x="5" y="0.0" width="590" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackfoot Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-xX-jbJ">
-                                                <rect key="frame" x="29" y="1" width="502" height="21"/>
+                                                <rect key="frame" x="29" y="14.5" width="532" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="502" id="Gu1-T7-0uL"/>
                                                     <constraint firstAttribute="height" constant="21" id="KBd-hC-G4B"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -278,12 +277,12 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="9Na-xX-jbJ" secondAttribute="trailing" constant="29" id="8HT-CL-f9g"/>
                                             <constraint firstItem="9Na-xX-jbJ" firstAttribute="leading" secondItem="h5j-Qg-Gxb" secondAttribute="leading" constant="29" id="LGt-LL-tKU"/>
-                                            <constraint firstItem="9Na-xX-jbJ" firstAttribute="centerY" secondItem="h5j-Qg-Gxb" secondAttribute="centerY" constant="-3.5" id="QvT-hS-jqi"/>
-                                            <constraint firstAttribute="height" constant="30" id="pJ6-1U-xRE"/>
+                                            <constraint firstItem="9Na-xX-jbJ" firstAttribute="centerY" secondItem="h5j-Qg-Gxb" secondAttribute="centerY" id="QvT-hS-jqi"/>
+                                            <constraint firstAttribute="height" constant="50" id="pJ6-1U-xRE"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-zJ-eGk">
-                                        <rect key="frame" x="0.0" y="33" width="560" height="60"/>
+                                        <rect key="frame" x="5" y="55" width="590" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="21" text="IPA Pronounciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRU-7z-fAm">
                                                 <rect key="frame" x="8" y="0.0" width="160" height="21"/>
@@ -295,7 +294,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="IPA goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVQ-NL-ZfS">
-                                                <rect key="frame" x="8" y="20" width="544" height="32"/>
+                                                <rect key="frame" x="8" y="20" width="574" height="32"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -314,10 +313,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAy-KR-YIi">
-                                        <rect key="frame" x="0.0" y="96" width="560" height="215"/>
+                                        <rect key="frame" x="5" y="120" width="590" height="215"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Gloss goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-gA-d94">
-                                                <rect key="frame" x="8" y="20" width="544" height="141"/>
+                                                <rect key="frame" x="8" y="20" width="574" height="141"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="141" id="yHP-09-Bf2"/>
@@ -348,20 +347,20 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="PAy-KR-YIi" firstAttribute="trailing" secondItem="Kh7-zJ-eGk" secondAttribute="trailing" id="758-1s-Ont"/>
-                                    <constraint firstAttribute="trailing" secondItem="PAy-KR-YIi" secondAttribute="trailing" id="HAf-Rr-n5A"/>
+                                    <constraint firstItem="PAy-KR-YIi" firstAttribute="leading" secondItem="kwn-ed-96F" secondAttribute="leading" constant="5" id="8yo-aU-HEI"/>
+                                    <constraint firstItem="Kh7-zJ-eGk" firstAttribute="leading" secondItem="kwn-ed-96F" secondAttribute="leading" constant="5" id="BlY-em-CwD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PAy-KR-YIi" secondAttribute="trailing" constant="5" id="HAf-Rr-n5A"/>
+                                    <constraint firstItem="h5j-Qg-Gxb" firstAttribute="leading" secondItem="kwn-ed-96F" secondAttribute="leading" constant="5" id="j14-RX-T9M"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5j-Qg-Gxb" secondAttribute="trailing" constant="5" id="kRe-Hd-eIS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kh7-zJ-eGk" secondAttribute="trailing" constant="5" id="pVw-Kf-WUj"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kwn-ed-96F" secondAttribute="trailing" id="9IY-0y-EUf"/>
-                            <constraint firstItem="kwn-ed-96F" firstAttribute="top" secondItem="P78-fl-lpg" secondAttribute="bottom" constant="25" id="Im1-Qv-soq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kwn-ed-96F" secondAttribute="trailing" id="M5P-Ce-fSe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kwn-ed-96F" secondAttribute="trailing" id="WlG-NA-5EE"/>
-                            <constraint firstItem="TYh-ao-2bo" firstAttribute="top" secondItem="kwn-ed-96F" secondAttribute="bottom" constant="200" id="Wri-kc-Ht4"/>
-                            <constraint firstItem="kwn-ed-96F" firstAttribute="leading" secondItem="OE3-vx-2MT" secondAttribute="leadingMargin" id="eoD-0u-KCu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kwn-ed-96F" secondAttribute="trailing" id="t05-ET-tnJ"/>
+                            <constraint firstItem="kwn-ed-96F" firstAttribute="top" secondItem="P78-fl-lpg" secondAttribute="bottom" constant="8" symbolic="YES" id="Im1-Qv-soq"/>
+                            <constraint firstAttribute="trailing" secondItem="kwn-ed-96F" secondAttribute="trailing" id="M5P-Ce-fSe"/>
+                            <constraint firstItem="kwn-ed-96F" firstAttribute="leading" secondItem="OE3-vx-2MT" secondAttribute="leading" id="eoD-0u-KCu"/>
                         </constraints>
                     </view>
                     <connections>
