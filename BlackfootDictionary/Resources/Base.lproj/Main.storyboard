@@ -17,73 +17,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-TC-S9P" userLabel="Translate Button">
-                                <rect key="frame" x="251" y="221" width="99" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gih-pg-Ppz">
+                                <rect key="frame" x="0.0" y="72" width="600" height="249"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwG-Qq-WGU">
+                                        <rect key="frame" x="5" y="0.0" width="590" height="119"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-bG-Ojt">
+                                                <rect key="frame" x="28" y="98" width="533.5" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="1Ve-g7-s9c"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" placeholder="Touch to type" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-B4-KvI" userLabel="Input Text Field">
+                                                <rect key="frame" x="8" y="8" width="574" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="wVz-ej-7LO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                                <connections>
+                                                    <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="1BQ-iN-OY3"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xNw-bG-Ojt" secondAttribute="trailing" constant="20" id="KaH-aO-Q1M" userLabel="View.trailing = trailing - 20"/>
+                                            <constraint firstItem="4ip-B4-KvI" firstAttribute="centerX" secondItem="wwG-Qq-WGU" secondAttribute="centerX" id="QVd-aA-LOR"/>
+                                            <constraint firstItem="4ip-B4-KvI" firstAttribute="leading" secondItem="wwG-Qq-WGU" secondAttribute="leadingMargin" id="RHR-qD-73y" userLabel="Input Text Field.leading = leading + 20"/>
+                                            <constraint firstItem="4ip-B4-KvI" firstAttribute="top" secondItem="wwG-Qq-WGU" secondAttribute="topMargin" id="Y0p-i8-Xwa"/>
+                                            <constraint firstItem="xNw-bG-Ojt" firstAttribute="leading" secondItem="wwG-Qq-WGU" secondAttribute="leadingMargin" constant="20" id="cSL-W3-s1R" userLabel="View.leading = leading + 20"/>
+                                            <constraint firstAttribute="height" constant="119" id="dAI-sh-Lmw"/>
+                                            <constraint firstAttribute="bottom" secondItem="xNw-bG-Ojt" secondAttribute="bottom" constant="20" id="dvH-0U-co1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4ip-B4-KvI" secondAttribute="trailing" id="vnb-Wm-mBn" userLabel="Input Text Field.trailing = trailing - 20"/>
+                                            <constraint firstItem="xNw-bG-Ojt" firstAttribute="top" secondItem="4ip-B4-KvI" secondAttribute="bottom" constant="10" id="ymz-62-wjB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-sG-Nmo">
+                                        <rect key="frame" x="5" y="124" width="590" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvq-tZ-uux" userLabel="Translate Button">
+                                                <rect key="frame" x="245" y="13" width="100" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="fqN-1h-6UV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Translate">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ON8-0o-9qI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dvq-tZ-uux" firstAttribute="centerY" secondItem="Hgd-sG-Nmo" secondAttribute="centerY" id="Lbl-Br-t80"/>
+                                            <constraint firstItem="dvq-tZ-uux" firstAttribute="centerX" secondItem="Hgd-sG-Nmo" secondAttribute="centerX" id="qBz-b0-YjX"/>
+                                            <constraint firstAttribute="height" constant="60" id="wNi-Nh-e6e"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFS-hD-Za8">
+                                        <rect key="frame" x="5" y="189" width="590" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-m4-GdV">
+                                                <rect key="frame" x="235" y="13" width="120" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="by0-Qw-mgY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Random Word">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="randomWordButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9QV-u2-bGy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="9WH-m4-GdV" firstAttribute="centerY" secondItem="QFS-hD-Za8" secondAttribute="centerY" id="Xja-TE-ayo"/>
+                                            <constraint firstItem="9WH-m4-GdV" firstAttribute="centerX" secondItem="QFS-hD-Za8" secondAttribute="centerX" id="fOb-m3-Hlw"/>
+                                            <constraint firstAttribute="height" constant="60" id="zXi-0w-qWX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6T5-rb-1Qy"/>
-                                    <constraint firstAttribute="width" constant="99" id="vwe-Mm-azk"/>
+                                    <constraint firstItem="Hgd-sG-Nmo" firstAttribute="leading" secondItem="Gih-pg-Ppz" secondAttribute="leading" constant="5" id="96H-Lh-7Qa"/>
+                                    <constraint firstItem="wwG-Qq-WGU" firstAttribute="leading" secondItem="Gih-pg-Ppz" secondAttribute="leading" constant="5" id="Ikj-tB-Dft"/>
+                                    <constraint firstItem="QFS-hD-Za8" firstAttribute="leading" secondItem="Gih-pg-Ppz" secondAttribute="leading" constant="5" id="WgD-ef-HXL"/>
+                                    <constraint firstAttribute="trailing" secondItem="wwG-Qq-WGU" secondAttribute="trailing" constant="5" id="Ybn-HW-rm5"/>
+                                    <constraint firstAttribute="trailing" secondItem="QFS-hD-Za8" secondAttribute="trailing" constant="5" id="You-c3-EIH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hgd-sG-Nmo" secondAttribute="trailing" constant="5" id="diR-Iu-inm"/>
+                                    <constraint firstAttribute="trailing" secondItem="wwG-Qq-WGU" secondAttribute="trailing" constant="5" id="evM-PH-8tf"/>
+                                    <constraint firstItem="wwG-Qq-WGU" firstAttribute="leading" secondItem="Gih-pg-Ppz" secondAttribute="leading" constant="5" id="s60-yS-3A8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Translate">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38b-hv-3QC"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" placeholder="Touch to type" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uux-dX-XcJ" userLabel="Input Text Field">
-                                <rect key="frame" x="20" y="72" width="560" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1BM-14-jOL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="translateButtonPressed:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="B9T-rk-wBh"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-m4-GdV">
-                                <rect key="frame" x="241" y="291" width="118" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DBU-3K-xfD"/>
-                                    <constraint firstAttribute="width" constant="118" id="hBb-a8-sUG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Random Word">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="randomWordButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9QV-u2-bGy"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iww-mo-mTi">
-                                <rect key="frame" x="20" y="160" width="560" height="1"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="XEX-pO-ctn"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hXN-TC-S9P" firstAttribute="top" secondItem="Iww-mo-mTi" secondAttribute="bottom" constant="60" id="1hz-Wt-8Qh"/>
-                            <constraint firstItem="uux-dX-XcJ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="4If-bx-cvi"/>
-                            <constraint firstItem="uux-dX-XcJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="7Xg-wx-4Ph"/>
-                            <constraint firstItem="Iww-mo-mTi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="DpQ-Yl-SZv"/>
-                            <constraint firstItem="9WH-m4-GdV" firstAttribute="top" secondItem="hXN-TC-S9P" secondAttribute="bottom" constant="40" id="RwV-AT-BHP"/>
-                            <constraint firstItem="Iww-mo-mTi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cvX-Nr-FQR"/>
-                            <constraint firstItem="uux-dX-XcJ" firstAttribute="centerX" secondItem="hXN-TC-S9P" secondAttribute="centerX" id="jb5-jo-Mv1" userLabel="Input Text Field.centerX = centerX"/>
-                            <constraint firstItem="uux-dX-XcJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="qcY-1s-aCQ"/>
-                            <constraint firstItem="Iww-mo-mTi" firstAttribute="top" secondItem="uux-dX-XcJ" secondAttribute="bottom" constant="8" id="u4Z-az-NOZ"/>
-                            <constraint firstItem="9WH-m4-GdV" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uiM-dd-Seg"/>
-                            <constraint firstItem="hXN-TC-S9P" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="vI9-ug-573"/>
+                            <constraint firstItem="Gih-pg-Ppz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="agN-wJ-3nH"/>
+                            <constraint firstItem="Gih-pg-Ppz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="hXI-Uj-jQR"/>
+                            <constraint firstAttribute="trailing" secondItem="Gih-pg-Ppz" secondAttribute="trailing" id="xbb-MI-ROV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Translate" id="Ovd-dI-4Hx">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="pPc-cz-tga" userLabel="Menu Button"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="inputTextField" destination="uux-dX-XcJ" id="eAC-Jx-Vdf"/>
+                        <outlet property="inputTextField" destination="4ip-B4-KvI" id="LlY-DW-RIM"/>
                         <outlet property="menuButton" destination="pPc-cz-tga" id="kCe-iK-ihp"/>
                         <segue destination="Uks-s2-lbP" kind="show" identifier="TranslateSegue" id="2SU-iI-dPq"/>
                         <segue destination="Uks-s2-lbP" kind="show" identifier="RandomWordSegue" id="zdc-Ib-TLh"/>
