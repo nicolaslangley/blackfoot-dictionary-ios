@@ -9,7 +9,7 @@
 #import "BFDTranslationEngineWrapper.h"
 
 // C++ includes
-#include "BFDTranslationEngine.hpp"
+#include "TranslationEngine.hpp"
 #include <string.h>
 #include <vector>
 

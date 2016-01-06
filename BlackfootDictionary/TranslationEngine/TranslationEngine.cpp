@@ -6,7 +6,7 @@
 //  Copyright © 2016 Hierarchy. All rights reserved.
 //
 
-#include "BFDTranslationEngine.hpp"
+#include "TranslationEngine.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <algorithm>
