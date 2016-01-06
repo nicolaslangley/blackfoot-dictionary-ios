@@ -31,7 +31,6 @@ class ResultsTableViewController: UITableViewController {
         randomWord = random
     }
     
-    // Receive the input text value and store it
     func setInputText(input: String, _nonojbc: () = ()) {
         inputText = input
     }
@@ -75,11 +74,9 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "ResultTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ResultTableViewCell
-        
         let translationResult = translationResults[indexPath.row]
         cell.blackfootWordLabel.text = translationResult.blackfootWord
         cell.englishGlossLabel.text = translationResult.englishGloss
-        
         return cell
     }
     

@@ -23,13 +23,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwG-Qq-WGU">
                                         <rect key="frame" x="5" y="0.0" width="590" height="119"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-bG-Ojt">
-                                                <rect key="frame" x="28" y="98" width="533.5" height="1"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="1Ve-g7-s9c"/>
-                                                </constraints>
-                                            </view>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" placeholder="Touch to type" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-B4-KvI" userLabel="Input Text Field">
                                                 <rect key="frame" x="8" y="8" width="574" height="80"/>
                                                 <constraints>
@@ -44,15 +37,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="xNw-bG-Ojt" secondAttribute="trailing" constant="20" id="KaH-aO-Q1M" userLabel="View.trailing = trailing - 20"/>
                                             <constraint firstItem="4ip-B4-KvI" firstAttribute="centerX" secondItem="wwG-Qq-WGU" secondAttribute="centerX" id="QVd-aA-LOR"/>
                                             <constraint firstItem="4ip-B4-KvI" firstAttribute="leading" secondItem="wwG-Qq-WGU" secondAttribute="leadingMargin" id="RHR-qD-73y" userLabel="Input Text Field.leading = leading + 20"/>
                                             <constraint firstItem="4ip-B4-KvI" firstAttribute="top" secondItem="wwG-Qq-WGU" secondAttribute="topMargin" id="Y0p-i8-Xwa"/>
-                                            <constraint firstItem="xNw-bG-Ojt" firstAttribute="leading" secondItem="wwG-Qq-WGU" secondAttribute="leadingMargin" constant="20" id="cSL-W3-s1R" userLabel="View.leading = leading + 20"/>
                                             <constraint firstAttribute="height" constant="119" id="dAI-sh-Lmw"/>
-                                            <constraint firstAttribute="bottom" secondItem="xNw-bG-Ojt" secondAttribute="bottom" constant="20" id="dvH-0U-co1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="4ip-B4-KvI" secondAttribute="trailing" id="vnb-Wm-mBn" userLabel="Input Text Field.trailing = trailing - 20"/>
-                                            <constraint firstItem="xNw-bG-Ojt" firstAttribute="top" secondItem="4ip-B4-KvI" secondAttribute="bottom" constant="10" id="ymz-62-wjB"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-sG-Nmo">
