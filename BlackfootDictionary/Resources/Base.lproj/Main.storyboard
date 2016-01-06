@@ -155,21 +155,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Nicolas Langley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6q-NT-uc6">
-                                <rect key="frame" x="183" y="106" width="235" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-wS-SP8">
+                                <rect key="frame" x="0.0" y="72" width="600" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izx-Gr-Zqt">
+                                        <rect key="frame" x="5" y="0.0" width="590" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Nicolas Langley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihi-o5-WH7">
+                                                <rect key="frame" x="181" y="20" width="229.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ihi-o5-WH7" firstAttribute="centerX" secondItem="Izx-Gr-Zqt" secondAttribute="centerX" id="E5L-T8-kCd"/>
+                                            <constraint firstAttribute="height" constant="60" id="Vfn-RQ-vL2"/>
+                                            <constraint firstItem="ihi-o5-WH7" firstAttribute="centerY" secondItem="Izx-Gr-Zqt" secondAttribute="centerY" id="Yen-Mx-mJH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="6Ay-SU-92s"/>
+                                    <constraint firstAttribute="trailing" secondItem="Izx-Gr-Zqt" secondAttribute="trailing" constant="5" id="J9C-I8-IZK"/>
+                                    <constraint firstItem="Izx-Gr-Zqt" firstAttribute="leading" secondItem="ZS5-wS-SP8" secondAttribute="leading" constant="5" id="dJf-ue-RY4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="DYy-qI-8pv" firstAttribute="top" secondItem="k6q-NT-uc6" secondAttribute="bottom" constant="473" id="Wue-e0-uTI"/>
-                            <constraint firstItem="k6q-NT-uc6" firstAttribute="top" secondItem="p2o-xz-A5v" secondAttribute="bottom" constant="42" id="bhT-ye-y8p"/>
-                            <constraint firstItem="k6q-NT-uc6" firstAttribute="centerX" secondItem="tdQ-3e-iXt" secondAttribute="centerX" id="sUK-oM-baM"/>
+                            <constraint firstItem="ZS5-wS-SP8" firstAttribute="leading" secondItem="tdQ-3e-iXt" secondAttribute="leading" id="A33-lT-Mgv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZS5-wS-SP8" secondAttribute="trailing" id="NOL-rY-K4X"/>
+                            <constraint firstItem="ZS5-wS-SP8" firstAttribute="top" secondItem="p2o-xz-A5v" secondAttribute="bottom" constant="8" symbolic="YES" id="XDY-Q3-FyR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="dd0-t3-slz">
