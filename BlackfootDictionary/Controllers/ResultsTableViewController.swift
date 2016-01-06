@@ -10,6 +10,8 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
+    // MARK: Properties
+    
     var inputText: String!
     var selectedData: TranslationResult!
     var randomWord: Bool = false
@@ -71,6 +73,8 @@ class ResultsTableViewController: UITableViewController {
             translationResults.append(TranslationResult(blackfootWord: word, englishGloss: gloss))
         }
     }
+    
+    // MARK: TableView functions
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

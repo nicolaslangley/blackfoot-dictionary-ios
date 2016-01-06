@@ -10,6 +10,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    // MARK: Properties
+    
     @IBOutlet weak var blackfootWordLabel: UILabel!
     @IBOutlet weak var englishGlossTextView: UITextView!
     @IBOutlet weak var ipaStringTextView: UITextView!

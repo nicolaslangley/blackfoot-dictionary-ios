@@ -10,7 +10,8 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    // Reveal view menu button
+    // MARK: Properties
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {

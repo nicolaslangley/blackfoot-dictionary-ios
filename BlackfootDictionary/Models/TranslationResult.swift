@@ -10,11 +10,11 @@ import Foundation
 
 class TranslationResult: NSObject {
 
-    // MARK: properties
+    // MARK: Properties
+    
     var blackfootWord: String
     var englishGloss: String
     
-    // MARK: initialization
     init(blackfootWord: String, englishGloss: String) {
         self.blackfootWord = blackfootWord
         self.englishGloss = englishGloss

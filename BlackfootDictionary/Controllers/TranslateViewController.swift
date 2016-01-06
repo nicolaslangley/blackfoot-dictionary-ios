@@ -10,9 +10,9 @@ import UIKit
 
 class TranslateViewController: UIViewController {
     
-    // Input outlets from Interface Builder
+    // MARK: Properties
+    
     @IBOutlet weak var inputTextField: UITextField!
-    // Reveal view menu button
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -54,7 +54,8 @@ class TranslateViewController: UIViewController {
         view.endEditing(true)
     }
 
-    // Handle pressing of translate button
+    // MARK: Button Handlers 
+    
     @IBAction func translateButtonPressed(sender : AnyObject) {
         if (inputTextField.text == "") {
             return
