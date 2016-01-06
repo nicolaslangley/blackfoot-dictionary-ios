@@ -42,6 +42,23 @@ class ResultsTableViewController: UITableViewController {
     
     func loadTranslatedResults() {
         let outputData = TranslationEngineWrapper.queryMatches(inputText)
+        if (outputData.count == 0) {
+            let alert = UIAlertController(title: "No Results Found",
+                                          message: "No Matching Word in Dictionary",
+                                          preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                switch action.style{
+                case .Default:
+                    print("no search results found")
+                    self.navigationController?.popViewControllerAnimated(true)
+                case .Cancel:
+                    print("cancel")
+                case .Destructive:
+                    print("destructive")
+                }
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
         processData(outputData)
     }
     
