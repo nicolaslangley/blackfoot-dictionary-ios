@@ -17,6 +17,7 @@ class ResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.contentInset = UIEdgeInsetsMake(-1.0, 0.0, 0.0, 0.0)
         if (randomWord) {
             self.navigationItem.title = "Random Word"
             loadRandomWord()
@@ -57,6 +58,14 @@ class ResultsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

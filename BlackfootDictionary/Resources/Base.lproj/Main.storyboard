@@ -198,37 +198,63 @@
         <scene sceneID="CK7-IG-yHF">
             <objects>
                 <tableViewController id="Uks-s2-lbP" customClass="ResultsTableViewController" customModule="Blackfoot_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PuV-Tm-qVm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="70" sectionHeaderHeight="18" sectionFooterHeight="18" id="PuV-Tm-qVm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" textLabel="VNA-G9-jF7" detailTextLabel="IvX-Zn-Yj8" style="IBUITableViewCellStyleSubtitle" id="r0O-wR-HgQ" customClass="ResultTableViewCell" customModule="Blackfoot_Dictionary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" id="r0O-wR-HgQ" customClass="ResultTableViewCell" customModule="Blackfoot_Dictionary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r0O-wR-HgQ" id="veh-0k-qNE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNA-G9-jF7">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IvX-Zn-Yj8">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYN-BS-ynt">
+                                            <rect key="frame" x="8" y="8" width="584" height="53.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eow-7k-a0f">
+                                                    <rect key="frame" x="19" y="31" width="546" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQv-fS-tP1">
+                                                    <rect key="frame" x="19" y="5" width="546" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="xXO-uq-RgW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Eow-7k-a0f" firstAttribute="leading" secondItem="ZYN-BS-ynt" secondAttribute="leading" constant="19" id="8vj-E0-nR3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eow-7k-a0f" secondAttribute="trailing" constant="19" id="FAz-Fb-XQa"/>
+                                                <constraint firstItem="JQv-fS-tP1" firstAttribute="trailing" secondItem="Eow-7k-a0f" secondAttribute="trailing" id="NHC-gK-POl"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eow-7k-a0f" secondAttribute="bottom" constant="5" id="YdC-q0-dUB"/>
+                                                <constraint firstItem="JQv-fS-tP1" firstAttribute="top" secondItem="ZYN-BS-ynt" secondAttribute="top" constant="5" id="aFP-Dm-97q"/>
+                                                <constraint firstItem="Eow-7k-a0f" firstAttribute="top" secondItem="JQv-fS-tP1" secondAttribute="bottom" constant="5" id="dRU-k5-5d1"/>
+                                                <constraint firstItem="JQv-fS-tP1" firstAttribute="leading" secondItem="Eow-7k-a0f" secondAttribute="leading" id="rPi-Zm-JoG"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="ZYN-BS-ynt" secondAttribute="leading" id="Aca-tF-vCR"/>
+                                        <constraint firstItem="ZYN-BS-ynt" firstAttribute="centerX" secondItem="veh-0k-qNE" secondAttribute="centerX" id="JFn-tU-Gqf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZYN-BS-ynt" secondAttribute="trailing" id="MwX-G9-VRu"/>
+                                        <constraint firstItem="ZYN-BS-ynt" firstAttribute="centerY" secondItem="veh-0k-qNE" secondAttribute="centerY" id="NYp-d0-InM"/>
+                                        <constraint firstAttribute="topMargin" secondItem="ZYN-BS-ynt" secondAttribute="top" id="kcr-Qw-CXm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZYN-BS-ynt" secondAttribute="bottom" id="vDv-1h-TzG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="blackfootWordLabel" destination="VNA-G9-jF7" id="wnp-Vc-uYT"/>
-                                    <outlet property="englishGlossLabel" destination="IvX-Zn-Yj8" id="yQC-lf-aTq"/>
+                                    <outlet property="blackfootWordLabel" destination="JQv-fS-tP1" id="Gzy-0v-LWu"/>
+                                    <outlet property="englishGlossLabel" destination="Eow-7k-a0f" id="ec8-xT-iqW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
