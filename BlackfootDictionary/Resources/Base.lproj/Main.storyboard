@@ -219,10 +219,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYN-BS-ynt">
-                                            <rect key="frame" x="8" y="3" width="584" height="64"/>
+                                            <rect key="frame" x="8" y="5" width="584" height="60"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eow-7k-a0f">
-                                                    <rect key="frame" x="19" y="31" width="546" height="28"/>
+                                                    <rect key="frame" x="19" y="31" width="546" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -255,8 +255,8 @@
                                         <constraint firstItem="ZYN-BS-ynt" firstAttribute="centerX" secondItem="veh-0k-qNE" secondAttribute="centerX" id="JFn-tU-Gqf"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZYN-BS-ynt" secondAttribute="trailing" id="MwX-G9-VRu"/>
                                         <constraint firstItem="ZYN-BS-ynt" firstAttribute="centerY" secondItem="veh-0k-qNE" secondAttribute="centerY" id="NYp-d0-InM"/>
-                                        <constraint firstAttribute="topMargin" secondItem="ZYN-BS-ynt" secondAttribute="top" constant="5" id="kcr-Qw-CXm"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ZYN-BS-ynt" secondAttribute="bottom" constant="-5" id="vDv-1h-TzG"/>
+                                        <constraint firstAttribute="top" secondItem="ZYN-BS-ynt" secondAttribute="top" constant="-5" id="kcr-Qw-CXm"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZYN-BS-ynt" secondAttribute="bottom" constant="5" id="vDv-1h-TzG"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -301,7 +301,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="KBd-hC-G4B"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
