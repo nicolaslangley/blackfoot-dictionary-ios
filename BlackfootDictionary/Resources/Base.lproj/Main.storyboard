@@ -291,7 +291,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kwn-ed-96F">
-                                <rect key="frame" x="0.0" y="72" width="600" height="335"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="340"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5j-Qg-Gxb">
                                         <rect key="frame" x="5" y="0.0" width="590" height="50"/>
@@ -315,7 +315,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-zJ-eGk">
-                                        <rect key="frame" x="5" y="55" width="590" height="60"/>
+                                        <rect key="frame" x="5" y="55" width="590" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="21" text="IPA Pronounciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRU-7z-fAm">
                                                 <rect key="frame" x="8" y="0.0" width="160" height="21"/>
@@ -327,7 +327,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="IPA goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVQ-NL-ZfS">
-                                                <rect key="frame" x="8" y="20" width="574" height="32"/>
+                                                <rect key="frame" x="8" y="20" width="574" height="37"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -336,7 +336,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="LRU-7z-fAm" firstAttribute="leading" secondItem="Kh7-zJ-eGk" secondAttribute="leadingMargin" id="1Fr-jZ-HH6"/>
-                                            <constraint firstAttribute="height" constant="60" id="CCO-gb-9QS"/>
+                                            <constraint firstAttribute="height" constant="65" id="CCO-gb-9QS"/>
                                             <constraint firstItem="oVQ-NL-ZfS" firstAttribute="trailing" secondItem="Kh7-zJ-eGk" secondAttribute="trailingMargin" id="E8S-mo-cLE"/>
                                             <constraint firstItem="oVQ-NL-ZfS" firstAttribute="bottom" secondItem="Kh7-zJ-eGk" secondAttribute="bottomMargin" id="F1t-JM-uzB"/>
                                             <constraint firstItem="LRU-7z-fAm" firstAttribute="top" secondItem="Kh7-zJ-eGk" secondAttribute="top" id="bTh-R2-Ukr"/>
@@ -346,7 +346,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAy-KR-YIi">
-                                        <rect key="frame" x="5" y="120" width="590" height="215"/>
+                                        <rect key="frame" x="5" y="125" width="590" height="215"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Gloss goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-gA-d94">
                                                 <rect key="frame" x="8" y="20" width="574" height="141"/>
