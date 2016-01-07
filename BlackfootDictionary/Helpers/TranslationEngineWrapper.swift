@@ -12,10 +12,26 @@ import Foundation
 class TranslationEngineWrapper {
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryMatches(inputWord: String) -> [String] {
+    class func queryAllMatches(inputWord: String) -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
-        let resultArray = BFDTranslationEngine.queryMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
+        let resultArray = BFDTranslationEngine.queryAllMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
+        return resultArray
+    }
+    
+    // Wrapper for query database function in BFDTranslationEngine
+    class func queryWordMatches(inputWord: String) -> [String] {
+        // Get path to database and then call BFDTranslationEngine function
+        let dbPath = DatabaseUtility.getDBPath()
+        let resultArray = BFDTranslationEngine.queryWordMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
+        return resultArray
+    }
+    
+    // Wrapper for query database function in BFDTranslationEngine
+    class func queryPhraseMatches(inputWord: String) -> [String] {
+        // Get path to database and then call BFDTranslationEngine function
+        let dbPath = DatabaseUtility.getDBPath()
+        let resultArray = BFDTranslationEngine.queryPhraseMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
         return resultArray
     }
     

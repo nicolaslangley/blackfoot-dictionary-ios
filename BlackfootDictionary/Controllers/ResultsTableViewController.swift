@@ -43,7 +43,7 @@ class ResultsTableViewController: UITableViewController {
     }
     
     func loadTranslatedResults() {
-        let outputData = TranslationEngineWrapper.queryMatches(inputText)
+        let outputData = TranslationEngineWrapper.queryAllMatches(inputText)
         if (outputData.count == 0) {
             let alert = UIAlertController(title: "No Results Found",
                                           message: "No Matching Word in Dictionary",

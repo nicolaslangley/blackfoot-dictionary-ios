@@ -17,7 +17,6 @@ using namespace std;
 
 // This function takes a query and the path to the database and returns the result as a string
 vector<string> queryDatabase(string sqlQuery, string databasePath) {
-    // Conversion from Objective-C to C++
     const char *db_path = databasePath.c_str();
     const char *input_query = sqlQuery.c_str();
     
@@ -79,8 +78,8 @@ vector<string> queryDatabase(string sqlQuery, string databasePath) {
 }
 
 // This function returns the number of matches given by count and that have a phrase including the given word
-vector<string> queryMatches(string word, string databasePath, int count) {
-    // Conversion from Objective-C to C++
+// Also returns of matches that consist of [adjective] + given word
+vector<string> queryAllMatches(string word, string databasePath, int count) {
     const char *input_word = word.c_str();
     // If count is 0, then all records are returned
     int record_count = (int)count;
@@ -88,7 +87,52 @@ vector<string> queryMatches(string word, string databasePath, int count) {
     
     // Compose the sql query based on the word and inputted count
     std::stringstream query_stream;
-    query_stream << "SELECT * FROM words WHERE gloss LIKE \"% " << input_word << "%\" OR gloss LIKE \"%$" << input_word << "%\"";
+    query_stream << "SELECT * FROM words WHERE gloss LIKE \'% " << input_word << " %\' ";
+    query_stream << "OR gloss LIKE \'%$" << input_word << "\' ";
+    if (record_count != 0) {
+        std::stringstream convert_stream;
+        convert_stream << record_count;
+        count_string = convert_stream.str();
+        query_stream << " LIMIT " << count_string;
+    }
+    std::string sql_query = query_stream.str();
+    
+    // Query the database with the query and return the result
+    return queryDatabase(sql_query, databasePath);
+}
+
+// This function returns the number of matches given by count and that consist of [adjective] + given word
+vector<string> queryWordMatches(string word, string databasePath, int count) {
+    const char *input_word = word.c_str();
+    // If count is 0, then all records are returned
+    int record_count = (int)count;
+    std::string count_string = "";
+    
+    // Compose the sql query based on the word and inputted count
+    std::stringstream query_stream;
+    query_stream << "SELECT * FROM words WHERE gloss LIKE \'%$" << input_word << "\' ";
+    if (record_count != 0) {
+        std::stringstream convert_stream;
+        convert_stream << record_count;
+        count_string = convert_stream.str();
+        query_stream << " LIMIT " << count_string;
+    }
+    std::string sql_query = query_stream.str();
+    
+    // Query the database with the query and return the result
+    return queryDatabase(sql_query, databasePath);
+}
+
+// This function returns the number of matches given by count and that have a phrase including the given word
+vector<string> queryPhraseMatches(string word, string databasePath, int count) {
+    const char *input_word = word.c_str();
+    // If count is 0, then all records are returned
+    int record_count = (int)count;
+    std::string count_string = "";
+    
+    // Compose the sql query based on the word and inputted count
+    std::stringstream query_stream;
+    query_stream << "SELECT * FROM words WHERE gloss LIKE \'% " << input_word << " %\' ";
     if (record_count != 0) {
         std::stringstream convert_stream;
         convert_stream << record_count;

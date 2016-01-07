@@ -13,7 +13,9 @@
 #include <vector>
 #include <string>
 std::vector<std::string> queryDatabase(std::string sqlQuery, std::string databasePath);
-std::vector<std::string> queryMatches(std::string word, std::string databasePath, int count);
+std::vector<std::string> queryAllMatches(std::string word, std::string databasePath, int count);
+std::vector<std::string> queryWordMatches(std::string word, std::string databasePath, int count);
+std::vector<std::string> queryPhraseMatches(std::string word, std::string databasePath, int count);
 std::vector<std::string> queryRandomWord(std::string databasePath);
 std::string convertToIPA(std::string word);
 

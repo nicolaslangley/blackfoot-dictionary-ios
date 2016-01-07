@@ -34,12 +34,46 @@
 }
 
 // This function returns the number of matches given by count and that have a phrase including the given word
-+ (NSMutableArray *) queryMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
++ (NSMutableArray *) queryAllMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
     // Conversion from Objective-C to C++
     const char *input_word = [word UTF8String];
     const char *db_path = [dbPath UTF8String];
     // Call into C++
-    std::vector<std::string> results = queryMatches(std::string(input_word), std::string(db_path), (int)count);
+    std::vector<std::string> results = queryAllMatches(std::string(input_word), std::string(db_path), (int)count);
+    // Return array of results
+    id nsstrings = [NSMutableArray new];
+    [nsstrings removeAllObjects];
+    for (auto str : results) {
+        id nsstr = [NSString stringWithUTF8String:str.c_str()];
+        [nsstrings addObject:nsstr];
+    }
+    return nsstrings;
+}
+
+// This function returns the number of matches given by count and that have a phrase including the given word
++ (NSMutableArray *) queryWordMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
+    // Conversion from Objective-C to C++
+    const char *input_word = [word UTF8String];
+    const char *db_path = [dbPath UTF8String];
+    // Call into C++
+    std::vector<std::string> results = queryWordMatches(std::string(input_word), std::string(db_path), (int)count);
+    // Return array of results
+    id nsstrings = [NSMutableArray new];
+    [nsstrings removeAllObjects];
+    for (auto str : results) {
+        id nsstr = [NSString stringWithUTF8String:str.c_str()];
+        [nsstrings addObject:nsstr];
+    }
+    return nsstrings;
+}
+
+// This function returns the number of matches given by count and that have a phrase including the given word
++ (NSMutableArray *) queryPhraseMatches:(NSString *) word databasePath:(NSString *) dbPath itemsToReturn:(NSInteger) count {
+    // Conversion from Objective-C to C++
+    const char *input_word = [word UTF8String];
+    const char *db_path = [dbPath UTF8String];
+    // Call into C++
+    std::vector<std::string> results = queryPhraseMatches(std::string(input_word), std::string(db_path), (int)count);
     // Return array of results
     id nsstrings = [NSMutableArray new];
     [nsstrings removeAllObjects];
