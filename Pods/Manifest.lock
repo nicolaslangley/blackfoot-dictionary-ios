@@ -1,7 +1,7 @@
 PODS:
-  - sqlite3 (3.8.6):
-    - sqlite3/common (= 3.8.6)
-  - sqlite3/common (3.8.6)
+  - sqlite3 (3.9.2.0):
+    - sqlite3/common (= 3.9.2.0)
+  - sqlite3/common (3.9.2.0)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - SWRevealViewController (~> 2.3)
 
 SPEC CHECKSUMS:
-  sqlite3: c3f593b0d7d39dc7c40bd9604abd756eee509ab5
+  sqlite3: 5e6238a0a38f7356c0b672290be9ea95e8ceee9f
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
 COCOAPODS: 0.38.2
