@@ -1,4 +1,6 @@
+<img src="readme-images/blackfeet_nation_logo.png" width="200"></img>
 ##Blackfoot Dictionary
+[![Build Status](https://travis-ci.org/nicolaslangley/blackfoot-dictionary-ios.svg?branch=master)](https://travis-ci.org/nicolaslangley/blackfoot-dictionary-ios)
 
 Blackfoot Dictionary is an iOS translator and dictionary for the Blackfoot language. <br>
 It is written in Swift and compatible with iOS 8.0 and greater.
