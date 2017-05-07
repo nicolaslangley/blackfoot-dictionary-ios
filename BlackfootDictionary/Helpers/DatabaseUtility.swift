@@ -10,7 +10,11 @@ import Foundation
 
 class DatabaseUtility {
     
-    // Retrieve the path to the database
+    /**
+     Retrive the dictionary database path
+     
+     - returns: DB path location
+     */
     class func getDBPath() -> String {
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         return documentsURL.URLByAppendingPathComponent("blkft-dictionary.db").path!

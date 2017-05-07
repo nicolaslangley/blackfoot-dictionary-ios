@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Hierarchy. All rights reserved.
 //
 
-#ifndef BlackfootDictionary_BFDTranslationEngine_h
-#define BlackfootDictionary_BFDTranslationEngine_h
+#ifndef BlackfootDictionary_BFDTranslationEngineWrapper_h
+#define BlackfootDictionary_BFDTranslationEngineWrapper_h
 
 #import <Foundation/Foundation.h>
 
