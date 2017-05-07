@@ -11,24 +11,26 @@ import Foundation
 class DatabaseUtility {
     
     /**
-     Retrive the dictionary database path
+     Retrieve the dictionary database path
      
      - returns: DB path location
      */
     class func getDBPath() -> String {
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        return documentsURL.URLByAppendingPathComponent("blkft-dictionary.db").path!
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return documentsURL.appendingPathComponent("blkft-dictionary.db").path
     }
     
-    // Copy database into resources
+    /**
+     Copy database from app bundle to database path
+     */
     class func copyDatabase() {
-        let fileManager = NSFileManager.defaultManager()
+        let fileManager = FileManager.default
         let dbPath = DatabaseUtility.getDBPath()
-        let success = fileManager.fileExistsAtPath(dbPath)
+        let success = fileManager.fileExists(atPath: dbPath)
         if !success {
-            let defaultDBURL = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("blkft-dictionary.db")
+            let defaultDBURL = Bundle.main.resourceURL?.appendingPathComponent("blkft-dictionary.db")
             do {
-                try fileManager.copyItemAtPath(defaultDBURL!.path!, toPath: dbPath)
+                try fileManager.copyItem(atPath: defaultDBURL!.path, toPath: dbPath)
             } catch let error as NSError {
                 print(error.localizedDescription)
                 exit(1)

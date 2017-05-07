@@ -31,11 +31,11 @@ class ResultsTableViewController: UITableViewController {
         }
     }
     
-    func setRandomWord(random: Bool, _nonojbc: () = ()) {
+    func setRandomWord(_ random: Bool, _nonojbc: () = ()) {
         randomWord = random
     }
     
-    func setInputText(input: String, _nonojbc: () = ()) {
+    func setInputText(_ input: String, _nonojbc: () = ()) {
         inputText = input
     }
     
@@ -50,30 +50,30 @@ class ResultsTableViewController: UITableViewController {
         if (outputWordData.count == 0 && outputPhraseData.count == 0) {
             let alert = UIAlertController(title: "No Results Found",
                                           message: "No Matching Word in Dictionary",
-                                          preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 switch action.style{
-                case .Default:
+                case .default:
                     print("no search results found")
-                    self.navigationController?.popViewControllerAnimated(true)
-                case .Cancel:
+                    self.navigationController?.popViewController(animated: true)
+                case .cancel:
                     print("cancel")
-                case .Destructive:
+                case .destructive:
                     print("destructive")
                 }
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         processData(outputWordData, isWord: true)
         processData(outputPhraseData, isWord: false)
     }
     
-    func processData(translations: [String], isWord: Bool) {
+    func processData(_ translations: [String], isWord: Bool) {
         for result in translations {
             // Split the string into word and translation
-            let resultArr = result.componentsSeparatedByString("-")
-            let word = resultArr[0].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-            let gloss = resultArr[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let resultArr = result.components(separatedBy: "-")
+            let word = resultArr[0].trimmingCharacters(in: CharacterSet.whitespaces)
+            let gloss = resultArr[1].trimmingCharacters(in: CharacterSet.whitespaces)
             if (isWord) {
                 self.translationWordResults.append(TranslationResult(blackfootWord: word, englishGloss: gloss))
             } else {
@@ -84,7 +84,7 @@ class ResultsTableViewController: UITableViewController {
     
     // MARK: TableView functions
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if (!randomWord) {
             return 2
         } else {
@@ -92,7 +92,7 @@ class ResultsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if (!randomWord) {
             if (section == 0) {
                 return 30.0
@@ -103,7 +103,7 @@ class ResultsTableViewController: UITableViewController {
         return 3.0
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (!randomWord) {
             if (section == 0) {
                 return "Words"
@@ -114,7 +114,7 @@ class ResultsTableViewController: UITableViewController {
         return nil
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
             return self.translationWordResults.count
         } else {
@@ -122,9 +122,9 @@ class ResultsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "ResultTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ResultTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ResultTableViewCell
         if (indexPath.section == 0) {
             let translationResult = self.translationWordResults[indexPath.row]
             cell.blackfootWordLabel.text = translationResult.blackfootWord
@@ -137,20 +137,20 @@ class ResultsTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if segue.identifier == "RowSelectionSegue" {
-            let vc: ResultViewController = segue.destinationViewController as! ResultViewController
+            let vc: ResultViewController = segue.destination as! ResultViewController
             vc.englishGloss = self.selectedData.englishGloss
             vc.blackfootWord = self.selectedData.blackfootWord
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.section == 0) {
             self.selectedData = self.translationWordResults[indexPath.row]
         } else {
             self.selectedData = self.translationPhraseResults[indexPath.row]
         }
-        performSegueWithIdentifier("RowSelectionSegue", sender: self)
+        performSegue(withIdentifier: "RowSelectionSegue", sender: self)
     }
 }

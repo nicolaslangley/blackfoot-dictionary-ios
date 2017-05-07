@@ -20,7 +20,7 @@ class AboutViewController: UIViewController {
         // Set up the reveal view controller
         if (self.revealViewController() != nil) {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -33,7 +33,7 @@ class AboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         // Action to perform for moving to another view
     }
 }

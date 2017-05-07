@@ -18,13 +18,13 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add tap recognizer
-        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(TranslateViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         // Set up the reveal view controller
         if (self.revealViewController() != nil) {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -37,14 +37,14 @@ class TranslateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         // Action to perform for moving to translate view
         if (segue.identifier == "TranslateSegue") {
-            let vc: ResultsTableViewController = segue.destinationViewController as! ResultsTableViewController
+            let vc: ResultsTableViewController = segue.destination as! ResultsTableViewController
             vc.setInputText(inputTextField.text!)
             vc.setRandomWord(false)
         } else if (segue.identifier == "RandomWordSegue") {
-            let vc: ResultsTableViewController = segue.destinationViewController as! ResultsTableViewController
+            let vc: ResultsTableViewController = segue.destination as! ResultsTableViewController
             vc.setRandomWord(true)
         }
     }
@@ -56,16 +56,16 @@ class TranslateViewController: UIViewController {
 
     // MARK: Button Handlers 
     
-    @IBAction func translateButtonPressed(sender : AnyObject) {
+    @IBAction func translateButtonPressed(_ sender : AnyObject) {
         if (inputTextField.text == "") {
             return
         } else {
-            self.performSegueWithIdentifier("TranslateSegue", sender: sender)
+            self.performSegue(withIdentifier: "TranslateSegue", sender: sender)
         }
     }
     
-    @IBAction func randomWordButtonPressed(sender : AnyObject) {
-        self.performSegueWithIdentifier("RandomWordSegue", sender: sender)
+    @IBAction func randomWordButtonPressed(_ sender : AnyObject) {
+        self.performSegue(withIdentifier: "RandomWordSegue", sender: sender)
     }
 }
 

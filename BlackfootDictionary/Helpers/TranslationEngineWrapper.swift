@@ -12,7 +12,7 @@ import Foundation
 class TranslationEngineWrapper {
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryAllMatches(inputWord: String) -> [String] {
+    class func queryAllMatches(_ inputWord: String) -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
         let resultArray = BFDTranslationEngine.queryAllMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
@@ -20,7 +20,7 @@ class TranslationEngineWrapper {
     }
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryWordMatches(inputWord: String) -> [String] {
+    class func queryWordMatches(_ inputWord: String) -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
         let resultArray = BFDTranslationEngine.queryWordMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
@@ -28,7 +28,7 @@ class TranslationEngineWrapper {
     }
     
     // Wrapper for query database function in BFDTranslationEngine
-    class func queryPhraseMatches(inputWord: String) -> [String] {
+    class func queryPhraseMatches(_ inputWord: String) -> [String] {
         // Get path to database and then call BFDTranslationEngine function
         let dbPath = DatabaseUtility.getDBPath()
         let resultArray = BFDTranslationEngine.queryPhraseMatches(inputWord, databasePath: dbPath, itemsToReturn: 0) as NSArray as! [String]
@@ -44,9 +44,9 @@ class TranslationEngineWrapper {
     }
     
     // Wrapper for IPA conversion function in BFDTranslationEngine
-    class func convertToIPA(inputWord: String) -> String {
-        let resultString = BFDTranslationEngine.convertToIPA(inputWord)
-        return resultString
+    class func convertToIPA(_ inputWord: String) -> String {
+        let resultString = BFDTranslationEngine.convert(toIPA: inputWord)
+        return resultString!
     }
     
 }
