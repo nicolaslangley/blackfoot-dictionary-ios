@@ -49,7 +49,7 @@ class TranslateViewController: UIViewController {
         }
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         // Resign first responder status
         view.endEditing(true)
     }
